@@ -11,8 +11,7 @@
     font-family: 'JetBrainsMono Nerd Font Propo','SF Pro Text', sans-serif;
     font-size: 12px;
     font-weight:bold;
-    border-radius: 10px;
-    margin-right: 5px;
+    border-radius: 15px;
 }
 
 window#waybar {
@@ -27,41 +26,36 @@ window#waybar.hidden {
 }
 
 button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
     border: none;
-    border-radius: 10px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px @accent;
+    background-color: @highlight;
 }
 
-/* you can set a style on hover for any module like this */
+/* you can set a style on hover for any module like this 
 #pulseaudio:hover {
-    background-color: @alt-accent;
-}
+    background-color: @accent;
+} */
 
 #workspaces button {
-    padding: 0 0 0 10px;
     background-color: transparent;
-    color: @fg;
+    color: @dimtext;
 }
 
 #workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
     background: rgba(0, 0, 0, 0.2);
 }
 
 #workspaces button.focused {
     background-color: @bg;
-    box-shadow: @accent;
 }
 
 #workspaces button.urgent {
-    background-color: @accent;
+    background-color: @alt-accent;
 }
 
 #workspaces button.active {
@@ -113,7 +107,7 @@ button:hover {
 }
 
 #clock {
-    background-color: @bg;
+    background-color: @alt-accent;
 }
 
 #battery {
