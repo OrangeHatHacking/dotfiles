@@ -57,7 +57,7 @@
         "format-ethernet": "{ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{essid} {signalStrength}% "
+	"tooltip-format": "{ifname} {ipaddr} {signalStrength}% "
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
