@@ -18,6 +18,7 @@
     "modules-right": [
 	"cpu",
 	"memory",
+	"network",
         "pulseaudio",
 	"tray",
 	"battery"
