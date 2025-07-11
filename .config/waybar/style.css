@@ -47,7 +47,9 @@ button:hover {
 #workspaces button:hover {
     box-shadow: inherit;
     text-shadow: inherit;
-    background: rgba(0, 0, 0, 0.2);
+    background-color:@alt-accent;
+    color: @fg;
+    opacity: 0.4;
 }
 
 #workspaces button.focused {
