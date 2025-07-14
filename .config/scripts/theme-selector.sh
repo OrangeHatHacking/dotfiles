@@ -5,6 +5,7 @@ rofi_theme_dir="$HOME/.config/rofi/themes"
 
 # Get thumbnails of images from wallpaper directory and pipe to rofi to display
 wallpapers=($(find -L "${wallpaper_dir}" -type f \( -iname \*.jpg -o -iname \*.jpeg -o -iname \*.png -o -iname \*.gif \) | sort))
+echo "$wallpapers"
 killall -9 rofi # if rofi is open already, close it
 wallpaper=$(for wal in "$wallpaper_dir"/*.jpg; do echo -en "$wal\0icon\x1f$wal\n"; done | rofi -dmenu -show -theme ${rofi_theme_dir}/wallpaper-select.rasi)
 
