@@ -31,17 +31,18 @@ button {
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
-    background-color: @highlight;
+    background-color: @alt-accent;
 }
 
-/* you can set a style on hover for any module like this 
+/* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: @accent;
-} */
+    background-color: @alt-accent;
+} 
 
 #workspaces button {
-    background-color: transparent;
+    background-color: @bg;
     color: @dimtext;
+    opacity: 0.7;
 }
 
 #workspaces button:hover {
@@ -61,8 +62,9 @@ button:hover {
 }
 
 #workspaces button.active {
-    background-color: @bg;
+    background-color: @highlight;
     color: @fg;
+    opacity: 1;
 }
 
 #mode {
@@ -109,7 +111,7 @@ button:hover {
 }
 
 #clock {
-    background-color: @alt-accent;
+    background-color: @highlight;
 }
 
 #battery {

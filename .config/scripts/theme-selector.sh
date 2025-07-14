@@ -11,6 +11,7 @@ wallpaper=$(for wal in "$wallpaper_dir"/*.jpg; do echo -en "$wal\0icon\x1f$wal\n
 # if wallpaper selected, pass to theme setting script
 if [ -n "$wallpaper" ]; then
     swww img "$wallpaper" --transition-type any --transition-duration 1 --transition-bezier .36,.91,.58,.98
-    wal -n -i "$wallpaper" --cols16 lighten --backend colorz
+    wal -n -i "$wallpaper" --backend colorz
+    cp "$wallpaper" "$HOME/.current_wallpaper"
 fi
 

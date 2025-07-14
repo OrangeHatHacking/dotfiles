@@ -34,8 +34,9 @@
         "format": "{}% RAM"
     },
     "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+	"format": "{:%H:%M}",
+        "tooltip-format": "{:%H:%M %d/%m/%Y}",
+        "format-alt": "{:%d/%m/%Y}"
     },
     "battery": {
         "states": {
