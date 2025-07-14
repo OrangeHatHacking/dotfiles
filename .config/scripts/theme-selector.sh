@@ -1,13 +1,16 @@
 #!/usr/bin/env bash
 
+# this prevents errors if certain file types aren't found in the wallpaper_dir
+shopt -s nullglob
+
 wallpaper_dir="$HOME/.config/wallpapers"
 rofi_theme_dir="$HOME/.config/rofi/themes"
 
 # Get thumbnails of images from wallpaper directory and pipe to rofi to display
-wallpapers=($(find -L "${wallpaper_dir}" -type f \( -iname \*.jpg -o -iname \*.jpeg -o -iname \*.png -o -iname \*.gif \) | sort))
+wallpapers=("${wallpaper_dir}"/*.{jpg,jpeg,png,gif})
 echo "$wallpapers"
 killall -9 rofi # if rofi is open already, close it
-wallpaper=$(for wal in "$wallpaper_dir"/*.jpg; do echo -en "$wal\0icon\x1f$wal\n"; done | rofi -dmenu -show -theme ${rofi_theme_dir}/wallpaper-select.rasi)
+wallpaper=$(for wal in "$wallpaper_dir"/*.{jpg,jpeg,png,gif}; do echo -en "$wal\0icon\x1f$wal\n"; done | rofi -dmenu -show -theme ${rofi_theme_dir}/wallpaper-select.rasi)
 
 # if wallpaper selected, pass to theme setting script
 if [ -n "$wallpaper" ]; then
