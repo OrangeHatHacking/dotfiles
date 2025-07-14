@@ -7,6 +7,13 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+
+alias i="yay -S --noconfirm"
+alias r="yay -Rns"
+alias u="yay -Syu --noconfirm"
+alias s="yay -Ss"
+alias q="yay -Q"
+
 PS1='[\u@\h \W]\$ '
 
 
