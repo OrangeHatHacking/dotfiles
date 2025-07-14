@@ -12,6 +12,7 @@
     shade-shadow:                white / 6%;
     shade-bg:                    white / 12%;
     shade-border:                white / 24%;
+    font:			 "JetBrainsMono Nerd Font 12";
 }
 
 window {
