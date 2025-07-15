@@ -43,6 +43,7 @@ button:hover {
     background-color: @bg;
     color: @dimtext;
     opacity: 0.7;
+    min-width: 18px;
 }
 
 #workspaces button:hover {
@@ -105,11 +106,6 @@ button:hover {
     margin-left: 10px;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
-
 #clock {
     background-color: @highlight;
 }
@@ -117,6 +113,7 @@ button:hover {
 #battery {
     background-color: @bg;
     color: @fg;
+    margin-right: 10px
 }
 
 #battery.charging, #battery.plugged {
