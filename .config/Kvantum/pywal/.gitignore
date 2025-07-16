@@ -1,0 +1,4 @@
+# Ignore the symlinked files in git
+*
+# but keep this gitignore so pywall directory exists in github and doesn't break scripts
+!.gitignore
