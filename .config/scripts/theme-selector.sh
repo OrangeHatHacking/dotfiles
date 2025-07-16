@@ -18,3 +18,7 @@ if [ -n "$wallpaper" ]; then
     cp "$wallpaper" "$HOME/.current_wallpaper"
 fi
 
+kvantum_dir="$HOME/.config/Kvantum/pywal"
+cache_dir="$HOME/.cache/wal"
+
+cp "$cache_dir/pywal.kvconfig" "$cache_dir/pywal.svg" "$kvantum_dir/"
