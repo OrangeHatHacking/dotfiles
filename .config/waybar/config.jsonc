@@ -53,11 +53,12 @@
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
-        "format-wifi": "{essid} ",
+        "format-wifi": "{signalStrength}% ",
+        "format-alt": "{essid} ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-	"tooltip-format": "{ifname} {ipaddr} {signalStrength}% "
+	"tooltip-format": "{essid}\n{ifname} {ipaddr}" 
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -76,7 +77,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol-qt"
     },
     "custom/media": {
         "format": "{icon} {text}",
