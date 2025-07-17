@@ -47,7 +47,7 @@ yay -S \
    
 - [ ] Add some more bits like spicetify and vencord, maybe a password manager? (probably beyond the scope of some dotfiles)
     
-- [ ] Get Hyprlock to activate on laptop lid close
+- [x] Get Hyprlock to activate on laptop lid close
 
 - [ ] Touch grass
 
