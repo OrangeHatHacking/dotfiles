@@ -2,7 +2,8 @@
 
 These are the dotfiles for my Hyprland setup on Arch, btw with dynamic wallpaper-based theming using `pywal16`. 
 It tries to integrate colors across Qt, and Wayland applications for a semi consistent theme based on the current wallpaper (selected via a custom rofi menu using `MOD+SHIFT` `T`.
-Gave up on gtk themeing honestly, swapped my apps to qt versions and everything looks decent.
+
+Gave up on gtk theming honestly, swapped my apps to qt versions and everything looks decent.
 
 
 ### Essential-ish Packages
