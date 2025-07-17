@@ -7,9 +7,9 @@ Gave up on gtk theming honestly, swapped my apps to qt versions and everything l
 
 
 ### Essential-ish Packages
-They're what I want on my system.
+Some are needed for the dots, others are preference (librewolf to hide from the technocratic overlords, etc. <img src="https://i.imgflip.com/1pzanj.jpg" width="50" style="vertical-align:middle;" />)
 
-Some are needed for the dots, others are preference (librewolf to hide form the technocratic overlords, etc. <img src="https://i.imgflip.com/1pzanj.jpg" width="50" style="vertical-align:middle;" />)
+They're what **_I_** want on **_my_** system.
 
 Install with `yay` or `paru`:
 ```bash
@@ -38,16 +38,43 @@ yay -S \
 
 <br>
 
+### Keybinds
+
+Super key refers to your $mainMod (the Windows key).
+
+| Key Combo                    | Action                               |
+| ---------------------------- | ------------------------------------ |
+| `Super + Return`             | Launch terminal                      |
+| `Super + C`                  | Kill active window                   |
+| `Super + B`                  | Launch browser                       |
+| `Super + M`                  | Exit Hyprland                        |
+| `Super + L`                  | Lock screen                          |
+| `Super + E`                  | Open file manager                    |
+| `Super + V`                  | Toggle floating layout               |
+| `Super + Space`              | Open launcher/menu (rofi)            |
+| `Super + P`                  | Enter pseudo mode (Whatever that is) |
+| `Super + J`                  | Toggle split direction (dwindle)     |
+| `Super + R`                  | Run Waybar launcher script           |
+| `Super + Shift + T`          | Open wallpaper/theme selector        |
+| `Super + Arrow Keys`         | Move focus between windows           |
+| `Super + Shift + Arrow Keys` | Swap windows in given direction      |
+| `Super + [0–9/0]`            | Switch to workspace 1–10             |
+| `Super + Shift + [0–9/0]`    | Move active window to workspace 1–10 |
+
+<br>
+
 ## To-Do
 - [ ] Write an install script to automate package installation via `yay` and symlinking dotfiles with `stow`
  
 - [ ] Set up sway-nc properly
     
-- [ ] Map out keybinds in the readme
+- [x] Map out keybinds in the readme
    
 - [ ] Add some more bits like spicetify and vencord, maybe a password manager? (probably beyond the scope of some dotfiles)
     
 - [x] Get Hyprlock to activate on laptop lid close
+
+- [ ] Break hyprland config into modular files
 
 - [ ] Touch grass
 
