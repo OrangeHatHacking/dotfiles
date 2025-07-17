@@ -24,6 +24,7 @@ yay -S \
   python-pywal16 \
   python-pywalfox-librewolf \
   hyprlock \
+  hypridle \
   librewolf-bin \
   ttf-jetbrains-mono-nerd \
   git \
