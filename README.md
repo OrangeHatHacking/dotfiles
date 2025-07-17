@@ -39,9 +39,11 @@ yay -S \
 
 ## To-Do
 - [ ] Write an install script to automate package installation via `yay` and symlinking dotfiles with `stow`
+ 
+- [ ] Set up sway-nc properly
     
 - [ ] Map out keybinds in the readme
-    
+   
 - [ ] Add some more bits like spicetify and vencord, maybe a password manager? (probably beyond the scope of some dotfiles)
     
 - [ ] Get Hyprlock to activate on laptop lid close
