@@ -80,7 +80,12 @@ Super key refers to your $mainMod (the Windows key).
 
 <br>
 
-For my own future reference, use ly as the login manager.
+#### For my own future reference:
+- Use ly as the display/login manager
+- librewolf extensions
+    - Pywalfox
+    - Firefox Multi-Account Containers
+    - Canvas Blocker
 
 <br>
 
