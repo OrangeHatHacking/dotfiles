@@ -13,6 +13,7 @@ alias r="yay -Rns"
 alias u="yay -Syu --noconfirm"
 alias s="yay -Ss"
 alias q="yay -Q"
+alias ff="fastfetch"
 
 PS1='[\u@\h \W]\$ '
 
