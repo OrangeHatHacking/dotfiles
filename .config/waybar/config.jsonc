@@ -10,7 +10,7 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "custom/media"
+        "mpris"
     ],
     "modules-center": [
 	"clock"
@@ -23,7 +23,7 @@
 	"battery"
     ],
     "hyprland/workspaces": {
-      "format": "{name}",
+      "format": "{name}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -34,8 +34,8 @@
     },
     "clock": {
 	"format": "{:%H:%M}",
-        "tooltip-format": "{:%H:%M %d/%m/%Y}",
-        "format-alt": "{:%d/%m/%Y}"
+        "tooltip-format": "{:%d/%m/%Y %H:%M}",
+        "format-alt": "{:%A, %B %d | %H:%M}"
     },
     "battery": {
         "states": {
@@ -54,40 +54,35 @@
     },
     "network": {
         "format-wifi": "{signalStrength}% ",
-        "format-alt": "{essid} ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-	"tooltip-format": "{essid}\n{ifname} {ipaddr}" 
+	"tooltip-format": "{essid}\n{ifname} {ipaddr}",
+	"on-click": "hyprctl dispatch exec '[float]' 'kitty -e nmtui'"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
+        "format": "{icon}",
+        "tooltip-format": "{volume}%",
         "format-muted": "",
         "format-source": "",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "󰋎",
-            "headset": "󰋎",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol-qt"
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol-qt"
     },
-    "custom/media": {
+    "mpris": {
         "format": "{icon} {text}",
         "return-type": "json",
         "max-length": 40,
         "format-icons": {
             "spotify": "",
+	    "youtube": "",
             "default": "🎜"
         },
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-    },
+    }
 }
