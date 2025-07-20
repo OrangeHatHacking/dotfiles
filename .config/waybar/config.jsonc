@@ -10,7 +10,7 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "mpris"
+        "custom/media"
     ],
     "modules-center": [
 	"clock"
@@ -73,9 +73,9 @@
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "pavucontrol-qt"
     },
-    "mpris": {
-        "format": "{icon} {text}",
-        "return-type": "json",
+    "custom/media": {
+        "format": "{}",
+	"interval": 1,
         "max-length": 40,
         "format-icons": {
             "spotify": "",
@@ -83,6 +83,6 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        "exec": "$HOME/.config/waybar/scripts/mediaplayer.sh 2> /dev/null" // Script in resources folder
     }
 }
