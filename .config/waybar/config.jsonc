@@ -75,12 +75,7 @@
     },
     "group/media": {
 	"orientation": "horizontal",
-	"modules": ["custom/media-prev", "custom/media-icon", "custom/media-play", "custom/media-next", "custom/media-info"]
-    },
-    "custom/media-icon": {
-	"format": "{}",
-	"exec": "$HOME/.config/waybar/scripts/icon.sh",
-	"interval": 5
+	"modules": ["custom/media-prev", "custom/media-play", "custom/media-next", "custom/media-info"]
     },
     "custom/media-play": {
 	"format": "{icon}",
