@@ -75,7 +75,7 @@
     },
     "group/media": {
 	"orientation": "horizontal",
-	"modules": ["custom/media-prev", "custom/media-play", "custom/media-next", "custom/media-info"]
+	"modules": ["custom/media-prev", "custom/media-play", "custom/media-next", "custom/media-icon", "custom/media-info"]
     },
     "custom/media-play": {
 	"format": "{icon}",
@@ -101,6 +101,11 @@
 	"exec-if": "$HOME/.config/waybar/scripts/display-skip-buttons.sh",
 	"on-click": "playerctl next &>/dev/null",
 	"tooltip": "next"
+    },
+    "custom/media-icon": {
+        "format": "{}",
+        "interval": 2,
+        "exec": "$HOME/.config/waybar/scripts/icon.sh 2> /dev/null"
     },
     "custom/media-info": {
         "format": "{}",

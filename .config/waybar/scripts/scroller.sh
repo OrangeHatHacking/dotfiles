@@ -1,5 +1,4 @@
 zscroll -p " | " \
-    --before-text "$($HOME/.config/waybar/scripts/icon.sh)" \
     --delay 0.2 \
     --length 30 \
     --match-command "playerctl status" \
