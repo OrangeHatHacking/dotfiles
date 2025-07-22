@@ -106,6 +106,6 @@
         "format": "{}",
 	"escape": true,
         "max-length": 30,
-        "exec": "$HOME/.config/waybar/scripts/mediaplayer.sh 2> /dev/null"
+        "exec": "$HOME/.config/waybar/scripts/scroller.sh 2> /dev/null"
     }
 }
