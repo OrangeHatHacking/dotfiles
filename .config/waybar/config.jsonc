@@ -4,7 +4,7 @@
     "reload_style_on_change":true, 
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 25,
+    "height": 30,
     "margin-top": 5,
     // "width": 1280, // Waybar width
     // Choose the order of the modules
@@ -75,7 +75,12 @@
     },
     "group/media": {
 	"orientation": "horizontal",
-	"modules": ["custom/media-prev", "custom/media-play", "custom/media-next", "custom/media-info"]
+	"modules": ["custom/media-prev", "custom/media-icon", "custom/media-play", "custom/media-next", "custom/media-info"]
+    },
+    "custom/media-icon": {
+	"format": "{}",
+	"exec": "$HOME/.config/waybar/scripts/icon.sh",
+	"interval": 5
     },
     "custom/media-play": {
 	"format": "{icon}",
@@ -103,8 +108,8 @@
 	"tooltip": "next"
     },
     "custom/media-info": {
-	"interval": 2,
         "format": "{}",
+	"escape": true,
         "max-length": 30,
         "exec": "$HOME/.config/waybar/scripts/mediaplayer.sh 2> /dev/null"
     }
