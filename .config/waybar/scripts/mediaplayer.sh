@@ -1,16 +1,18 @@
 #! /usr/bin/env bash
 
-media=$(playerctl metadata -f "({{playerName}}) {{artist}} - {{title}}")
-player_status=$(playerctl status)
+media=$(playerctl metadata -f "{{artist}} - {{title}}")
 
-if [[ $player_status = "Playing" ]]
-then
-    song_status=""
-elif [[ $player_status = "Paused" ]]
-then
-    song_status=""
-else
-    song_status=""
-fi
+player=$(playerctl metadata --format "{{xesam:url}}" | awk -F '/' '{ print $3 }')
 
-echo -e "$song_status $media"
+declare -A icons
+icons[spotify]=""
+icons[youtube]=""
+icons[default]="🎜"
+
+icon=${icons[default]}
+
+[[ "$player" =~ [Ss]potify ]] && icon=${icons[spotify]} 
+[[ "$player" =~ [Yy]outube ]] && icon=${icons[youtube]} 
+
+text="$icon $media"
+printf '%s' "$(jq --compact-output --unbuffered --arg text "$text" '{text: $text}')"

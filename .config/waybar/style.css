@@ -182,20 +182,15 @@ label:focus {
     color: @dimtext;
 }
 
-#custom-media {
-    background-color: @bg;
-    color: @fg;
-    min-width: 100px;
-}
-
-#custom-media.custom-spotify {
+#group_media {
     background-color: @bg;
     color: @fg;
 }
 
-#custom-media.custom-vlc {
-    background-color: @bg;
+#custom-media-prev, #custom-media-play, #custom-media-next {
+    padding: 0 5px;
 }
+
 
 #mpd.disconnected {
     background-color: #f53c3c;

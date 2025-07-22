@@ -15,6 +15,7 @@ Install with `yay` or `paru`:
 ```bash
 yay -S \
   swww \
+  playerctl \
   waybar \
   rofi \
   kitty \

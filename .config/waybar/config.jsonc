@@ -10,7 +10,7 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "custom/media"
+        "group/media"
     ],
     "modules-center": [
 	"clock"
@@ -73,16 +73,39 @@
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "pavucontrol-qt"
     },
-    "custom/media": {
+    "group/media": {
+	"orientation": "horizontal",
+	"modules": ["custom/media-prev", "custom/media-play", "custom/media-next", "custom/media-info"]
+    },
+    "custom/media-play": {
+	"format": "{icon}",
+	"exec": "playerctl status 2>/dev/null",
+	"format-icons": { 
+	    "Playing": "",
+	    "Paused": "", 
+	    "Stopped": ""
+	},
+	"on-click": "playerctl play-pause &>/dev/null",
+	"tooltip": false
+    },
+    "custom/media-prev": {
+	"interval": 5,
+	"format": "",
+	"exec-if": "$HOME/.config/waybar/scripts/display-skip-buttons.sh",
+	"on-click": "playerctl previous &>/dev/null",
+	"tooltip": "prev"
+    },
+    "custom/media-next": {
+	"interval": 5,
+	"format": "",
+	"exec-if": "$HOME/.config/waybar/scripts/display-skip-buttons.sh",
+	"on-click": "playerctl next &>/dev/null",
+	"tooltip": "next"
+    },
+    "custom/media-info": {
+	"interval": 2,
         "format": "{}",
-	"interval": 1,
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-	    "youtube": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/scripts/mediaplayer.sh 2> /dev/null" // Script in resources folder
+        "max-length": 30,
+        "exec": "$HOME/.config/waybar/scripts/mediaplayer.sh 2> /dev/null"
     }
 }
