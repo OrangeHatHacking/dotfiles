@@ -8,7 +8,7 @@ vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 vim.keymap.set('n', '<ESC>', '<cmd>nohlsearch<CR>')
 
 -- Double space to escape insert mode
-vim.keymap.set('i', '<leader><leader>', '<ESC>')
+-- vim.keymap.set('i', '<leader><leader>', '<ESC>')
 
 -- Disable arrow keys, git gud scrub
 vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!"<CR>')
