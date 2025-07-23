@@ -10,4 +10,4 @@ icon=${icons[default]}
 [[ "$player" =~ [Ss]potify ]] && icon=${icons[spotify]} 
 [[ "$player" =~ [Yy]outube ]] && icon=${icons[youtube]} 
 
-echo "$icon "
+echo "$icon"

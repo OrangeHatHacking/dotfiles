@@ -35,7 +35,9 @@ yay -S \
   pcmanfm-qt \
   zscroll-git \
   qt5-wayland \
-  qt6-wayland
+  qt6-wayland \
+  bluez \
+  bluetui
 ```
 
 <br>

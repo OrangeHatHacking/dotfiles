@@ -78,34 +78,33 @@
 	"modules": ["custom/media-prev", "custom/media-play", "custom/media-next", "custom/media-icon", "custom/media-info"]
     },
     "custom/media-play": {
-	"format": "{icon}",
-	"exec": "playerctl status 2>/dev/null",
-	"format-icons": { 
-	    "Playing": "",
-	    "Paused": "", 
-	    "Stopped": ""
-	},
+	"interval": 1,
+	"format": "{}",
+	"exec": "$HOME/.config/waybar/scripts/play-pause-buttons.sh",
 	"on-click": "playerctl play-pause &>/dev/null",
 	"tooltip": false
     },
     "custom/media-prev": {
-	"interval": 5,
-	"format": "",
-	"exec-if": "$HOME/.config/waybar/scripts/display-skip-buttons.sh",
-	"on-click": "playerctl previous &>/dev/null",
-	"tooltip": "prev"
+	"interval": 1,
+	"hide-empty-text": true,
+	"format": "{}",
+	"exec": "$HOME/.config/waybar/scripts/display-skip-buttons.sh --prev",
+	"on-click": "playerctl previous",
+	"tooltip": false
     },
     "custom/media-next": {
-	"interval": 5,
-	"format": "",
-	"exec-if": "$HOME/.config/waybar/scripts/display-skip-buttons.sh",
-	"on-click": "playerctl next &>/dev/null",
-	"tooltip": "next"
+	"interval": 1,
+	"hide-empty-text": true,
+	"format": "{}",
+	"exec": "$HOME/.config/waybar/scripts/display-skip-buttons.sh --next",
+	"on-click": "playerctl next",
+	"tooltip": false
     },
     "custom/media-icon": {
         "format": "{}",
-        "interval": 2,
-        "exec": "$HOME/.config/waybar/scripts/icon.sh 2> /dev/null"
+        "interval": 1,
+        "exec": "$HOME/.config/waybar/scripts/icon.sh",
+	"tooltip": false
     },
     "custom/media-info": {
         "format": "{}",
