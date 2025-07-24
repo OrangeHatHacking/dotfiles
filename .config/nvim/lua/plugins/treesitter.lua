@@ -21,8 +21,10 @@ return {
 		"toml",
 		"c",
 		"cpp",
+		"html",
+		"javascript",
 	    },
-	    auto_install = false,
+	    auto_install = true,
 	})
     end
 }
