@@ -16,5 +16,3 @@ vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!"<CR>')
 vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!"<CR>')
 vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!"<CR>')
 
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
