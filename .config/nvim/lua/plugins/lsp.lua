@@ -58,12 +58,19 @@ return {
                 header = '',
                 prefix = '',
             },
+            update_in_insert = false,
             signs = {
                 text = {
                     [vim.diagnostic.severity.ERROR] = '✘',
                     [vim.diagnostic.severity.WARN] = '▲',
                     [vim.diagnostic.severity.HINT] = '⚑',
                     [vim.diagnostic.severity.INFO] = '»',
+                },
+                texthl = {
+                    [vim.diagnostic.severity.ERROR] = 'DiagnosticSignError',
+                    [vim.diagnostic.severity.WARN] = 'DiagnosticSignWarn',
+                    [vim.diagnostic.severity.HINT] = 'DiagnosticSignHint',
+                    [vim.diagnostic.severity.INFO] = 'DiagnosticSignInfo',
                 },
             },
         })
@@ -92,8 +99,8 @@ return {
                 vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
                 vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)
                 vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
-		vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
-		vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
+                vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
+                vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
             end,
         })
 
@@ -101,11 +108,11 @@ return {
         require('mason-lspconfig').setup({
             ensure_installed = {
                 "lua_ls",
-		"bashls",
-		"pyright",
+                "bashls",
+                "pyright",
                 "ts_ls",
-		"html",
-		"cssls",
+                "html",
+                "cssls",
                 "eslint",
             },
             handlers = {
