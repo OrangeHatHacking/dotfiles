@@ -45,20 +45,21 @@ yay -S \
 ### Keybinds
 
 Super key refers to your $mainMod (the Windows key).
+Vim motions can replace arrow keys for window movements (H, J, K, L)
 
 | Key Combo                    | Action                               |
 | ---------------------------- | ------------------------------------ |
 | `Super + Return`             | Launch terminal                      |
 | `Super + C`                  | Kill active window                   |
 | `Super + B`                  | Launch browser                       |
-| `Super + M`                  | Exit Hyprland                        |
-| `Super + L`                  | Lock screen                          |
+| `Super + F4`                 | Exit Hyprland                        |
+| `Super + M`                  | Lock screen                          |
 | `Super + E`                  | Open file manager                    |
 | `Super + V`                  | Toggle floating layout               |
 | `Super + Space`              | Open launcher/menu (rofi)            |
 | `Super + P`                  | Enter pseudo mode (Whatever that is) |
-| `Super + J`                  | Toggle split direction (dwindle)     |
-| `Super + R`                  | Run Waybar launcher script           |
+| `Super + S`                  | Toggle split direction (dwindle)     |
+| `Super + R`                  | Toggle waybar                        |
 | `Super + Shift + T`          | Open wallpaper/theme selector        |
 | `Super + Arrow Keys`         | Move focus between windows           |
 | `Super + Shift + Arrow Keys` | Swap windows in given direction      |
@@ -79,6 +80,8 @@ Super key refers to your $mainMod (the Windows key).
 - [x] Get Hyprlock to activate on laptop lid close
 
 - [ ] Break hyprland config into modular files
+
+- [ ] Switch to USWM for hyprland and subsequent app launching
 
 - [ ] Touch grass
 
