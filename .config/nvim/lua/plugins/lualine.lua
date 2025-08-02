@@ -1,11 +1,11 @@
 return {
     {
-	"nvim-lualine/lualine.nvim",
-	dependencies = {
-	    "nvim-tree/nvim-web-devicons",
-	},
-	opts = {
-	    theme = "pywal16-nvim",
-	}
+        "nvim-lualine/lualine.nvim",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        },
+        opts = {
+            theme = "neopywal",
+        }
     },
 }

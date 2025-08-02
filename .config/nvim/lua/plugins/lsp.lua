@@ -59,20 +59,7 @@ return {
                 prefix = '',
             },
             update_in_insert = false,
-            signs = {
-                text = {
-                    [vim.diagnostic.severity.ERROR] = '✘',
-                    [vim.diagnostic.severity.WARN] = '▲',
-                    [vim.diagnostic.severity.HINT] = '⚑',
-                    [vim.diagnostic.severity.INFO] = '»',
-                },
-                texthl = {
-                    [vim.diagnostic.severity.ERROR] = 'DiagnosticSignError',
-                    [vim.diagnostic.severity.WARN] = 'DiagnosticSignWarn',
-                    [vim.diagnostic.severity.HINT] = 'DiagnosticSignHint',
-                    [vim.diagnostic.severity.INFO] = 'DiagnosticSignInfo',
-                },
-            },
+            signs = false
         })
 
         -- Add cmp_nvim_lsp capabilities settings to lspconfig
