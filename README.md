@@ -59,7 +59,8 @@ Vim motions can replace arrow keys for window movements (H, J, K, L)
 | `Super + Space`              | Open launcher/menu (rofi)            |
 | `Super + P`                  | Enter pseudo mode (Whatever that is) |
 | `Super + S`                  | Toggle split direction (dwindle)     |
-| `Super + R`                  | Toggle waybar                        |
+| `Super + R`                  | Hyrpctl reload                       |
+| `Super + F`                  | Activate fullscreen for current window|
 | `Super + Shift + T`          | Open wallpaper/theme selector        |
 | `Super + Arrow Keys`         | Move focus between windows           |
 | `Super + Shift + Arrow Keys` | Swap windows in given direction      |
