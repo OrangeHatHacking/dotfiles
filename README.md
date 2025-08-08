@@ -36,6 +36,7 @@ yay -S \
   zscroll-git \
   qt5-wayland \
   qt6-wayland \
+  keepassxc \
   bluez \
   bluetui
 ```
@@ -76,7 +77,7 @@ Vim motions can replace arrow keys for window movements (H, J, K, L)
     
 - [x] Map out keybinds in the readme
    
-- [ ] Add some more bits like spicetify and vencord, maybe a password manager? (probably beyond the scope of some dotfiles)
+- [ ] Add some more bits like spicetify and vencord
     
 - [x] Get Hyprlock to activate on laptop lid close
 
