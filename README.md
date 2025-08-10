@@ -33,8 +33,6 @@ yay -S \
   stow \
   pcmanfm-qt \
   zscroll-git \
-  qt5-wayland \
-  qt6-wayland \
   keepassxc \
   bluez \
   bluetui

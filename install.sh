@@ -31,7 +31,7 @@ echo "Installing essential-ish packages from README..."
 yay -Sy --needed --noconfirm \
   swww playerctl waybar rofi kitty qt6ct kvantum swaync python-pywal16 \
   python-pywalfox-librewolf hyprlock librewolf-bin ttf-jetbrains-mono-nerd \
-  git pavucontrol-qt colorz stow pcmanfm-qt zscroll-git qt5-wayland qt6-wayland \
+  git pavucontrol-qt colorz stow pcmanfm-qt zscroll-git \
   keepassxc bluez bluetui
 
 # Stow dotfiles
