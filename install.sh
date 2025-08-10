@@ -27,23 +27,38 @@ fi
 cd "$DOTFILES"
 
 # Install packages via yay
-echo "Installing essential-ish packages from README..."
+echo "Installing packages..."
 yay -Sy --needed --noconfirm \
   swww neovim playerctl waybar rofi kitty qt6ct kvantum swaync python-pywal16 \
   python-pywalfox-librewolf hyprlock librewolf-bin ttf-jetbrains-mono-nerd \
   git pavucontrol-qt colorz stow pcmanfm-qt zscroll-git \
   keepassxc bluez bluetui
 
-# Stow dotfiles
-echo "Symlinking dotfiles using stow..."
-for pkg in */; do
-  pkg=${pkg%/}
-  echo "Stowing $pkg..."
-  if ! stow --dir="$DOTFILES" --target="$HOME" --no-folding "$pkg"; then
-    echo "Conflict detected for $pkg—removing old links and retrying..."
-    stow --dir="$DOTFILES" --target="$HOME" -DR "$pkg"
-    stow --dir="$DOTFILES" --target="$HOME" "$pkg"
+echo "Cleaning conflicting files/directories in home..."
+
+for item in * .*; do
+  # Skip '.' and '..'
+  [[ "$item" == "." || "$item" == ".." ]] && continue
+
+  target="$HOME/$item"
+
+  if [ -e "$target" ] || [ -L "$target" ]; then
+    echo "Backing up existing $target"
+    mv "$target" "$target.bkp"
   fi
 done
 
-echo "Installation complete! Please restart your terminal/session."
+echo "All conflicting files removed."
+
+stow .
+
+echo "Installation complete! Attempting automatic restart of programs"
+
+cd "$HOME"
+
+if [[ $- == *i* ]]; then
+  source "$HOME/.bashrc"
+fi
+swww-daemon &
+bash .config/scripts/startup-theme.sh &
+hyprctl reload
