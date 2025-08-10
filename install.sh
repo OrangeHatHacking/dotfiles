@@ -59,6 +59,6 @@ cd "$HOME"
 if [[ $- == *i* ]]; then
   source "$HOME/.bashrc"
 fi
-swww-daemon &
+pidof swww-daemon || swww-daemon &
 bash .config/scripts/startup-theme.sh &
 hyprctl reload
