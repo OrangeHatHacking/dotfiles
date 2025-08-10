@@ -15,6 +15,7 @@ Install with `yay` or `paru`:
 ```bash
 yay -S \
   swww \
+  neovim \
   playerctl \
   waybar \
   rofi \
