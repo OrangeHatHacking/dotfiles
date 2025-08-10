@@ -16,7 +16,7 @@ if ! command -v yay &>/dev/null; then
 fi
 
 # Clone dotfiles repo (or update if exists)
-DOTFILES=~/.dotfiles
+DOTFILES=~/dotfiles
 if [ -d "$DOTFILES/.git" ]; then
   echo "Updating existing dotfiles repo..."
   (cd "$DOTFILES" && git pull)
