@@ -5,6 +5,13 @@ It tries to integrate colors across Qt, and Wayland applications for a semi cons
 
 Gave up on gtk theming honestly, swapped my apps to qt versions and everything looks decent.
 
+---
+### One Line Installation
+
+This can be installed on a fresh arch install (with hyprland and it's dependencies) with the following command
+
+`curl -fsSL https://raw.githubusercontent.com/OrangeHatHacking/dotfiles/main/install.sh | bash -s --`
+
 
 ### Essential-ish Packages
 Some are needed for the dots, others are preference (librewolf to hide from the technocratic overlords, etc. <img src="https://i.imgflip.com/1pzanj.jpg" width="50" style="vertical-align:middle;" />)
@@ -69,7 +76,7 @@ Vim motions can replace arrow keys for window movements (H, J, K, L)
 <br>
 
 ## To-Do
-- [ ] Write an install script to automate package installation via `yay` and symlinking dotfiles with `stow`
+- [x] Write an install script to automate package installation via `yay` and symlinking dotfiles with `stow`
  
 - [ ] Set up sway-nc properly
     
