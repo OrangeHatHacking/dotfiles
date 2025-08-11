@@ -31,6 +31,7 @@ yay -S \
   qt6ct \
   kvantum \
   swaync \
+  swayosd \
   python-pywal16 \
   python-pywalfox-librewolf \
   hyprlock \
