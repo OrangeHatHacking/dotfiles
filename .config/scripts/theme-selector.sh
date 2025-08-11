@@ -30,4 +30,5 @@ if [ -n "$wallpaper" ]; then
     swww img "$wallpaper" --transition-type any --transition-duration 1 --transition-bezier .36,.91,.58,.98
     wal -n -i "$wallpaper" --backend colorz
     cp "$wallpaper" "$HOME/.current_wallpaper"
+    swaync-client --reload-css
 fi
