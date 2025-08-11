@@ -163,15 +163,15 @@ progressbar {
 }
 
 .widget-dnd > switch:hover {
-  background: @hover;
+  background: alpha(@background-alt, .4);
 }
 
 .widget-dnd > switch:checked {
-  background: @selected;
+  background: @urgent;
 }
 
 .widget-dnd > switch:checked:hover {
-  background: @hover;
+  background: alpha(@background-alt, .4);
 }
 
 .widget-dnd > switch slider {
