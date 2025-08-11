@@ -10,6 +10,7 @@ alias grep='grep --color=auto'
 
 alias i="yay -S --noconfirm"
 alias r="yay -Rns"
+alias rf="yay -Rns --noconfirm"
 alias u="yay -Syu --noconfirm"
 alias s="yay -Ss"
 alias q="yay -Q"
