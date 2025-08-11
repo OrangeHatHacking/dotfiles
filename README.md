@@ -85,7 +85,7 @@ Vim motions can replace arrow keys for window movements (H, J, K, L)
     
 - [x] Map out keybinds in the readme
    
-- [ ] Add some more bits like spicetify and vencord
+- [x] Add some more bits like spicetify and vencord
     
 - [x] Get Hyprlock to activate on laptop lid close
 
