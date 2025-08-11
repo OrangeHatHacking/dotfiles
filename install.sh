@@ -29,10 +29,19 @@ cd "$DOTFILES"
 # Install packages via yay
 echo "Installing packages..."
 yay -Sy --needed --noconfirm \
-  swww neovim playerctl waybar rofi kitty qt6ct kvantum swaync python-pywal16 \
+  swww neovim playerctl waybar rofi-wayland kitty qt6ct kvantum swaync python-pywal16 \
   python-pywalfox-librewolf hyprlock librewolf-bin ttf-jetbrains-mono-nerd \
   git pavucontrol-qt colorz stow pcmanfm-qt zscroll-git \
-  keepassxc bluez bluetui
+  keepassxc bluez bluetui discord
+
+echo "Installing vencord"
+tmp_vencord_file="temp_vencord_installation_file"
+
+curl -sS https://github.com/Vencord/Installer/releases/download/v1.4.0/VencordInstallerCli-linux --output "$tmp_vencord_file" --location --fail
+
+chmod +x "$tmp_vencord_file"
+sudo ./"$tmp_vencord_file" -install -branch stable
+rm "$tmp_vencord_file"
 
 echo "Cleaning conflicting files/directories in home..."
 

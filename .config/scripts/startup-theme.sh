@@ -15,9 +15,13 @@ cp "$previous_wallpaper" "$HOME/.current_wallpaper"
 
 kvantum_dir="$HOME/.config/Kvantum/pywal"
 cache_dir="$HOME/.cache/wal"
+vencord_dir="$HOME/.config/Vencord/themes"
 
 # if the pywal outputs for kvantum theme exist,
 # and the symlink files dont exist,
 # then create the symlinks
 [[ -f "$cache_dir/pywal.kvconfig" && ! -e  "$kvantum_dir/pywal.kvconfig" ]] && ln -s "$cache_dir/pywal.kvconfig" "$kvantum_dir/pywal.kvconfig"
 [[ -f "$cache_dir/pywal.svg" && ! -e "$kvantum_dir/pywal.svg" ]] && ln -s "$cache_dir/pywal.svg" "$kvantum_dir/pywal.svg"
+
+# symlink discord pywal theme
+[[ -f "$cache_dir/discord-pywal.css" && ! -e "$vencord_dir/discord-pywal.css" ]] && ln -s "$cache_dir/discord-pywal.css" "$vencord_dir/discord-pywal.css"

@@ -25,7 +25,7 @@ yay -S \
   neovim \
   playerctl \
   waybar \
-  rofi \
+  rofi-wayland \
   kitty \
   qt6ct \
   kvantum \
@@ -43,7 +43,8 @@ yay -S \
   zscroll-git \
   keepassxc \
   bluez \
-  bluetui
+  bluetui \
+  discord
 ```
 
 <br>
