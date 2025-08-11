@@ -179,26 +179,6 @@ progressbar {
   border-radius: 6px;
 }
 
-  /* Buttons menu */
-.widget-buttons-grid {
-  font-size: x-large;
-  padding: 6px 2px;
-  margin: 6px;
-  border-radius: 12px;
-  background: @background-alt;
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button {
-  margin: 4px 10px;
-  padding: 6px 12px;
-  background: transparent;
-  border-radius: 8px;
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  background: @hover;
-}
-
 
   /* Music player */
 .widget-mpris {
@@ -211,14 +191,13 @@ progressbar {
   /* NOTE: Background need *opacity 1* otherwise will turn into the album art blurred  */
 .widget-mpris-player {
     background-color: @background-sec;
-    border-radius: 22px;
-    padding: 6px 14px;
+    border-radius: 10px;
     margin: 6px;
 }
 
 .widget-mpris > box > button {
   color: @text;
-  border-radius: 20px;
+  border-radius: 10px;
 }
  
 .widget-mpris button {
@@ -230,7 +209,7 @@ progressbar {
 }
 
 .widget-mpris-album-art {
-  border-radius: 16px;
+  border-radius: 10px;
 }
  
 .widget-mpris-title {

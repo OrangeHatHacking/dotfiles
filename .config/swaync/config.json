@@ -41,7 +41,6 @@
     }
   },
   "widgets": [
-    "label",
     "mpris",
     "title",
     "dnd",
@@ -56,10 +55,6 @@
     "dnd": {
       "text": "Do not disturb"
     },
-    "label": {
-      "max-lines": 1,
-      "text": " "
-    },
     "mpris": {
       "image-size": 96,
       "image-radius": 12
@@ -67,8 +62,6 @@
     "volume": {
       "label": "󰕾",
         "show-per-app": true
-    }
-      ]
     }
   }
 }
