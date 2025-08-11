@@ -23,6 +23,7 @@ Install with `yay` or `paru`:
 yay -S \
   swww \
   neovim \
+  nmtui \
   playerctl \
   waybar \
   rofi-wayland \

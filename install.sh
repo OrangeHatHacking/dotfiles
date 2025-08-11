@@ -29,7 +29,7 @@ cd "$DOTFILES"
 # Install packages via yay
 echo "Installing packages..."
 yay -Sy --needed --noconfirm \
-  swww neovim playerctl waybar rofi-wayland kitty qt6ct kvantum swaync python-pywal16 \
+  swww neovim nmtui playerctl waybar rofi-wayland kitty qt6ct kvantum swaync python-pywal16 \
   python-pywalfox-librewolf hyprlock librewolf-bin ttf-jetbrains-mono-nerd \
   git pavucontrol-qt colorz stow pcmanfm-qt zscroll-git \
   keepassxc bluez bluetui discord
