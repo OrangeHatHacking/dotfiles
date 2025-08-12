@@ -83,13 +83,5 @@ echo "All conflicting files removed."
 
 stow .
 
-echo "Installation complete! Attempting automatic restart of programs"
-
-cd "$HOME"
-
-if [[ $- == *i* ]]; then
-  source "$HOME/.bashrc"
-fi
-pidof swww-daemon || swww-daemon &
-bash .config/scripts/startup-theme.sh &
-hyprctl reload
+echo "Installation complete! Rebooting!"
+reboot
