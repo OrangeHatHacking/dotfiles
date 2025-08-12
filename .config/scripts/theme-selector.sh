@@ -14,6 +14,7 @@ for wal in "${wallpapers[@]}"; do
     entries+="${name}\0icon\x1f${wal}\n"
 done
 
+killall -9 rofi
 # Launch rofi with thumbnails and filenames
 selected=$(echo -en "$entries" | rofi -dmenu -show -theme "${rofi_theme_dir}/wallpaper-select.rasi")
 

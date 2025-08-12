@@ -1,2 +1,1 @@
-killall -9 rofi # kill if open already (theme selector etc.)
-rofi -show drun -theme ~/.config/rofi/themes/default.rasi -display-drun ""
+pidof rofi && killall -9 rofi || rofi -show drun -theme ~/.config/rofi/themes/default.rasi -display-drun ""
