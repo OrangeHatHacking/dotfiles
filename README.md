@@ -45,6 +45,7 @@ yay -S \
   keepassxc \
   bluez \
   bluetui \
+  npm \
   discord
 ```
 

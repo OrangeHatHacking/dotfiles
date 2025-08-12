@@ -2,8 +2,8 @@
 set -euo pipefail
 
 # Basic dependencies
-echo "Installing git and base-devel..."
-sudo pacman -Sy --needed --noconfirm git base-devel
+echo "Installing Hyprland and essential packages..."
+sudo pacman -Sy --needed --noconfirm hyprland xdg-desktop-portal-hyprland qt5-wayland qt6-wayland polkit-kde-agent xdg-utils vim openssh git base-devel
 
 # Install yay (if not already present)
 if ! command -v yay &>/dev/null; then
@@ -14,6 +14,28 @@ if ! command -v yay &>/dev/null; then
   cd ..
   rm -rf ~/yay-temp
 fi
+
+# Detect graphics card
+echo "Attempting to detect Graphics Card"
+if lspci | grep -qi nvidia; then
+    printf "Nvidia Graphics Card detected!!!\nAttempting to install drivers"
+    yay -Sy --needed --noconfirm dkms libva-nvidia-driver nvidia-open-dkms xorg-server xorg-xinit \
+	libva-mesa-driver mesa vulkan-nouveau xf86-video-nouveau nvidia-dkms
+elif lspci | grep -Ei 'intel.*vga'; then
+    printf "Intel Graphics Card detected!!!\nAttempting to install drivers"
+    yay -Sy --needed --noconfirm intel-media-driver libva-intel-driver mesa vulkan-intel xorg-server xorg-xinit
+elif lspci | grep -E 'AMD|ATI'; then
+    printf "AMD Graphics Card detected!!!\nAttempting to install drivers"
+    yay -Sy --needed --noconfirm libva-mesa-driver mesa vulkan-radeon xf86-video-amdgpu xf86-video-ati xorg-server xorg-xinit
+else
+    printf "No Graphics Card detected!!!\nAttempting to install all open source drivers"
+    yay -Sy --needed --noconfirm intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan-nouveau vulkan-radeon \
+	xf86-video-amdgpu xf86-video-ati xf86-video-nouveau xorg-server xorg-xinit
+fi
+
+echo "installing and enabling ly as login manager..."
+yay -Sy --noconfirm ly
+sudo systemctl enable ly.service
 
 # Clone dotfiles repo (or update if exists)
 DOTFILES=~/dotfiles
@@ -31,7 +53,7 @@ echo "Installing packages..."
 yay -Sy --needed --noconfirm \
   swww neovim nmtui playerctl waybar rofi-wayland kitty qt6ct kvantum swaync python-pywal16 \
   python-pywalfox-librewolf hyprlock librewolf-bin ttf-jetbrains-mono-nerd \
-  git pavucontrol-qt colorz stow pcmanfm-qt zscroll-git \
+  git pavucontrol-qt colorz stow pcmanfm-qt zscroll-git npm \
   keepassxc bluez bluetui discord
 
 echo "Installing vencord"
