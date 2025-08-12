@@ -82,7 +82,7 @@ Vim motions can replace arrow keys for window movements (H, J, K, L)
 ## To-Do
 - [x] Write an install script to automate package installation via `yay` and symlinking dotfiles with `stow`
  
-- [ ] Set up sway-nc properly
+- [x] Set up sway-nc properly
     
 - [x] Map out keybinds in the readme
    
