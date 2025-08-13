@@ -103,27 +103,35 @@ for item in * .*; do
 done
 
 printf "\n\nAll conflicting files removed.\n\n"
-sleep 1
 stow .
 
 cd "$HOME"
 
 while true; do
-    read -r -p "Installation complete!Would you like to reboot now? (No may cause buggy behaviour)[Y/n]: " response
+    printf "\n\n\tInstallation complete!!!\n\tWould you like to reboot now? (No may cause buggy behaviour)[Y/n]: "
+    read -r -t 10 response
 
     case "${response,,}" in
 	y|yes|'')
+	    printf "\nrebooting...\n"
+	    sleep 2
 	    reboot
 	    ;;
 	n|no)
+	    printf "\nAttempting to set up and start hyprland...\n"
+	    sleep 2
 	    if [[ $- == *i* ]]; then
 		source "$HOME/.bashrc"
 	    fi
 	    pidof swww-daemon || swww-daemon &
 	    bash .config/scripts/startup-theme.sh &
-	    hyprctl reload
+	    pidof Hyprland && hyprctl reload || hyprland
 	    return 0
 	    ;;
+	*)
+	    printf "INVALID INPUT AUTOREBOOTING"
+	    sleep 3
+	    reboot
     esac
 done
 
