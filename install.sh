@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# keep sudo permissions refreshed to avoid multiple prompts and possible script timeout
+sudo -v
+
+while true; do
+    sleep 180
+    sudo -n true
+    kill -0 "$$" 2>/dev/null || exit
+done &
+
 # Basic dependencies
 printf "\n\n###############################################\n#Installing Hyprland and essential packages...#\n##############################################\n\n"
 sleep 3
