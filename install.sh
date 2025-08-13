@@ -125,8 +125,6 @@ while true; do
 	    if [[ $- == *i* ]]; then
 		source "$HOME/.bashrc"
 	    fi
-	    pidof swww-daemon || swww-daemon &
-	    bash .config/scripts/startup-theme.sh &
 	    pidof Hyprland && hyprctl reload || hyprland
 	    return 0
 	    ;;
