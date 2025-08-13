@@ -112,7 +112,7 @@ cd "$HOME"
 
 while true; do
     printf "\n\n\t${GREEN}Installation complete!!!${NC}\n\tWould you like to reboot now? (No may cause buggy behaviour)[Y/n]: "
-    read -r -t 10 response
+    read -r response
     case "${response,,}" in
 	y|yes|'')
 	    printf "\nrebooting...\n"
