@@ -11,7 +11,7 @@ while true; do
 done &
 
 # Basic dependencies
-printf "\n\n###############################################\n#Installing Hyprland and essential packages...#\n##############################################\n\n"
+printf "\n\n###############################################\n#Installing Hyprland and essential packages...#\n###############################################\n\n"
 sleep 3
 sudo pacman -Sy --needed --noconfirm hyprland xdg-desktop-portal-hyprland qt5-wayland qt6-wayland polkit-kde-agent xdg-utils vim openssh git base-devel
 
@@ -49,7 +49,7 @@ else
 	xf86-video-amdgpu xf86-video-ati xf86-video-nouveau xorg-server xorg-xinit
 fi
 
-printf "\n\n################################################\ninstalling and enabling ly as login manager...#\n################################################\n\n"
+printf "\n\n################################################\n#Installing and enabling ly as login manager...#\n################################################\n\n"
 sleep 3
 yay -Sy --noconfirm ly
 sudo systemctl enable ly.service
