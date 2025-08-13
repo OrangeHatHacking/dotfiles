@@ -10,14 +10,17 @@ while true; do
     kill -0 "$$" 2>/dev/null || exit
 done &
 
+GREEN=$(tput setaf 2) #'\033[0;31m'
+NC=$(tput sgr0) #'\033[0m'
+
 # Basic dependencies
-printf "\n\n###############################################\n#Installing Hyprland and essential packages...#\n###############################################\n\n"
+printf "\n\n###############################################\n#${GREEN}Installing Hyprland and essential packages...${NC}#\n###############################################\n\n"
 sleep 3
 sudo pacman -Sy --needed --noconfirm hyprland xdg-desktop-portal-hyprland qt5-wayland qt6-wayland polkit-kde-agent xdg-utils vim openssh git base-devel
 
 # Install yay (if not already present)
 if ! command -v yay &>/dev/null; then
-  printf "\n\n##############################\n#Installing yay AUR helper...#\n##############################\n\n"
+  printf "\n\n##############################\n#${GREEN}Installing yay AUR helper...${NC}#\n##############################\n\n"
   git clone https://aur.archlinux.org/yay.git ~/yay-temp
   sleep 3
   cd ~/yay-temp
@@ -27,7 +30,7 @@ if ! command -v yay &>/dev/null; then
 fi
 
 # Detect graphics card
-printf "\n\n####################################\n#Attempting to detect Graphics Card#\n####################################\n\n"
+printf "\n\n####################################\n#${GREEN}Attempting to detect Graphics Card${NC}#\n####################################\n\n"
 sleep 3
 if lspci | grep -qi nvidia; then
     printf "\n\nNvidia Graphics Card detected!!!\nAttempting to install drivers\n\n"
@@ -49,7 +52,7 @@ else
 	xf86-video-amdgpu xf86-video-ati xf86-video-nouveau xorg-server xorg-xinit
 fi
 
-printf "\n\n################################################\n#Installing and enabling ly as login manager...#\n################################################\n\n"
+printf "\n\n################################################\n#${GREEN}Installing and enabling ly as login manager...${NC}#\n################################################\n\n"
 sleep 3
 yay -Sy --noconfirm ly
 sudo systemctl enable ly.service
@@ -87,7 +90,7 @@ chmod +x "$tmp_vencord_file"
 sudo ./"$tmp_vencord_file" -install -branch stable
 rm "$tmp_vencord_file"
 
-printf "\n\n###################################################\n#Cleaning conflicting files/directories in home...#\n###################################################\n\n"
+printf "\n\n###################################################\n#${GREEN}Cleaning conflicting files/directories in home...${NC}#\n###################################################\n\n"
 sleep 3
 
 for item in * .*; do
@@ -108,9 +111,8 @@ stow .
 cd "$HOME"
 
 while true; do
-    printf "\n\n\tInstallation complete!!!\n\tWould you like to reboot now? (No may cause buggy behaviour)[Y/n]: "
+    printf "\n\n\t${GREEN}Installation complete!!!${NC}\n\tWould you like to reboot now? (No may cause buggy behaviour)[Y/n]: "
     read -r -t 10 response
-
     case "${response,,}" in
 	y|yes|'')
 	    printf "\nrebooting...\n"
@@ -133,5 +135,6 @@ while true; do
 	    sleep 3
 	    reboot
     esac
+    exit
 done
 
