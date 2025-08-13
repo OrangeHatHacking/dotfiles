@@ -15,7 +15,7 @@ alias u="yay -Syu --noconfirm"
 alias s="yay -Ss"
 alias q="yay -Q"
 alias ff="fastfetch"
-alias {n,nv,vi,vim}="nvim"
+alias {n,nv}="nvim"
 alias h="history | grep "
 
 PS1='[\u@\h \W]\$ '
