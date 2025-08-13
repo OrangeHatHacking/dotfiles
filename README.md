@@ -8,7 +8,8 @@ Gave up on gtk theming honestly, swapped my apps to qt versions and everything l
 ---
 ### One Line Installation
 
-This can be installed on a fresh arch install (with hyprland and it's dependencies) with the following command
+This can be installed on a (minimal) fresh arch install with the following command
+Hyprland, ly, graphics drivers, etc. will be automagically installed and setup
 
 `curl -fsSL https://raw.githubusercontent.com/OrangeHatHacking/dotfiles/main/install.sh | bash -s --`
 
