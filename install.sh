@@ -73,8 +73,8 @@ cd "$DOTFILES"
 # Install packages via yay
 printf "\n\nInstalling packages...\n\n"
 sleep 2
-yay -Sy --needed --noconfirm \
-  swww neovim nmtui playerctl waybar rofi-wayland kitty qt6ct kvantum swaync python-pywal16 \
+yay -Sy --needed --noconfirm swww neovim playerctl waybar \
+    rofi-wayland kitty qt6ct kvantum swaync python-pywal16 \
   python-pywalfox-librewolf hyprlock librewolf-bin ttf-jetbrains-mono-nerd \
   git pavucontrol-qt colorz stow pcmanfm-qt zscroll-git npm \
   keepassxc bluez bluetui discord
@@ -109,6 +109,12 @@ printf "\n\nAll conflicting files removed.\n\n"
 stow .
 
 cd "$HOME"
+
+
+printf "\n\n###################################################\n#${GREEN}Disabling iwd and enabling NetworkManager service${NC}#\n###################################################\n\n"
+sleep 3
+sudo systemctl enable --now NetworkManager
+sudo systemctl disable iwd
 
 while true; do
     printf "\n\n\t${GREEN}Installation complete!!!${NC}\n\tWould you like to reboot now? (No may cause buggy behaviour)[Y/n]: "

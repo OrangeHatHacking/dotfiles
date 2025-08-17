@@ -38,7 +38,7 @@ change_backlight() {
 case "$1" in
 	"--get")
 		get_backlight
-		;;
+;;
 	"--inc")
 		change_backlight "+10%"
 		;;

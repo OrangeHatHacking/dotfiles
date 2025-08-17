@@ -164,7 +164,8 @@
             "enableStreamQualityBypass": true,
             "enableEmojiBypass": true,
             "transformEmojis": true,
-            "transformStickers": true
+            "transformStickers": true,
+            "transformCompoundSentence": false
         },
         "FakeProfileThemes": {
             "enabled": false
@@ -271,7 +272,14 @@
             "enabled": false
         },
         "NewGuildSettings": {
-            "enabled": false
+            "enabled": true,
+            "guild": true,
+            "messages": 1,
+            "everyone": true,
+            "role": false,
+            "highlights": true,
+            "events": true,
+            "showAllChannels": true
         },
         "NoBlockedMessages": {
             "enabled": false
@@ -313,7 +321,7 @@
             "enabled": false
         },
         "NormalizeMessageLinks": {
-            "enabled": false
+            "enabled": true
         },
         "NotificationVolume": {
             "enabled": false
@@ -349,7 +357,8 @@
             "enabled": true,
             "userBasedCategoryList": {
                 "401767095190159362": []
-            }
+            },
+            "canCollapseDmSection": false
         },
         "PlainFolderIcon": {
             "enabled": false
@@ -373,7 +382,12 @@
             "enabled": false
         },
         "RelationshipNotifier": {
-            "enabled": true
+            "enabled": true,
+            "offlineRemovals": true,
+            "groups": true,
+            "servers": true,
+            "friends": true,
+            "friendRequestCancels": true
         },
         "ReplaceGoogleSearch": {
             "enabled": false
@@ -421,10 +435,13 @@
             "enabled": false
         },
         "ShowHiddenThings": {
-            "enabled": false
+            "enabled": true
         },
         "ShowMeYourName": {
-            "enabled": true
+            "enabled": true,
+            "displayNames": false,
+            "mode": "user-nick",
+            "inReplies": false
         },
         "ShowTimeoutDuration": {
             "enabled": false
@@ -546,6 +563,9 @@
         },
         "SupportHelper": {
             "enabled": true
+        },
+        "CopyStickerLinks": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -558,6 +578,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1754868544781
+        "settingsSyncVersion": 1755378579379
     }
 }
