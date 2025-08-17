@@ -67,7 +67,7 @@ Vim motions can replace arrow keys for window movements (H, J, K, L)
 | `Super + E`                  | Open file manager                    |
 | `Super + V`                  | Toggle floating layout               |
 | `Super + Space`              | Open launcher/menu (rofi)            |
-| `Super + P`                  | Enter pseudo mode (Whatever that is) |
+| `Super + P`                  | Open keepassxc                       |
 | `Super + S`                  | Toggle split direction (dwindle)     |
 | `Super + R`                  | Hyrpctl reload                       |
 | `Super + F`                  | Activate fullscreen for current window|
