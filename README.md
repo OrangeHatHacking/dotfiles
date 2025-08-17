@@ -24,6 +24,7 @@ Install with `yay` or `paru`:
 yay -S \
   swww \
   neovim \
+  hypridle \
   playerctl \
   waybar \
   rofi-wayland \

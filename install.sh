@@ -37,7 +37,7 @@ if lspci | grep -qi nvidia; then
     sleep 3
     yay -Sy --needed --noconfirm dkms libva-nvidia-driver nvidia-open-dkms xorg-server xorg-xinit \
 	libva-mesa-driver mesa vulkan-nouveau xf86-video-nouveau nvidia-dkms
-elif lspci | grep -Ei 'intel.*vga'; then
+elif lspci | grep -Ei 'intel'; then
     printf "\n\nIntel Graphics Card detected!!!\nAttempting to install drivers\n\n"
     sleep 3
     yay -Sy --needed --noconfirm intel-media-driver libva-intel-driver mesa vulkan-intel xorg-server xorg-xinit
@@ -73,7 +73,7 @@ cd "$DOTFILES"
 # Install packages via yay
 printf "\n\nInstalling packages...\n\n"
 sleep 2
-yay -Sy --needed --noconfirm swww neovim playerctl waybar \
+yay -Sy --needed --noconfirm swww neovim playerctl waybar hypridle \
     rofi-wayland kitty qt6ct kvantum swaync python-pywal16 \
   python-pywalfox-librewolf hyprlock librewolf-bin ttf-jetbrains-mono-nerd \
   git pavucontrol-qt colorz stow pcmanfm-qt zscroll-git npm \
