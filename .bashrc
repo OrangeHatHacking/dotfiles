@@ -8,12 +8,20 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-alias i="yay -S --noconfirm"
-alias r="yay -Rns"
-alias rf="yay -Rns --noconfirm"
-alias u="yay -Syu --noconfirm"
-alias s="yay -Ss"
-alias q="yay -Q"
+alias yi="yay -S --noconfirm"
+alias yr="yay -Rns"
+alias yrf="yay -Rns --noconfirm"
+alias yu="yay -Syu --noconfirm"
+alias ys="yay -Ss"
+alias yq="yay -Q"
+
+alias i="sudo pacman -S --noconfirm"
+alias r="sudo pacman -Rns"
+alias rf="sudo pacman -Rns --noconfirm"
+alias u="sudo pacman -Syu --noconfirm"
+alias s="sudo pacman -Ss"
+alias q="sudo pacman -Q"
+
 alias ff="fastfetch"
 alias {n,nv}="nvim"
 alias h="history | grep "
