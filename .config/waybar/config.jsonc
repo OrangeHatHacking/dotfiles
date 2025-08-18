@@ -20,6 +20,7 @@
 	"memory",
 	"network",
         "pulseaudio",
+	"custom/powerprofile",
 	"battery"
     ],
     "hyprland/workspaces": {
@@ -51,6 +52,12 @@
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
+    },
+    "custom/powerprofile": {
+	"exec": "$HOME/.config/waybar/scripts/powerprofile.sh",
+	"on-click": "$HOME/.config/waybar/scripts/powerprofile.sh toggle",
+	"interval": 1,
+	"return-type": "json"
     },
     "network": {
         "format-wifi": "{signalStrength}% ",

@@ -80,6 +80,7 @@ button:hover {
 #disk,
 #temperature,
 #backlight,
+#custom-powerprofile,
 #network,
 #pulseaudio,
 #wireplumber,
@@ -138,6 +139,11 @@ label:focus {
 }
 
 #cpu {
+    background-color: @bg;
+    color: @fg;
+}
+
+#custom-powerprofile {
     background-color: @bg;
     color: @fg;
 }
