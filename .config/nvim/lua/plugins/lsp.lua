@@ -58,7 +58,6 @@ return {
                 header = '',
                 prefix = '',
             },
-            update_in_insert = false,
             signs = false
         })
 
