@@ -21,8 +21,10 @@ They're what **_I_** want on **_my_** system.
 
 ```
 This list has gotten too big to maintain here since install.sh has been changed to work from a
-minimal arch install. Check the install.sh script 
-(You should be doing that anyways, what are you thinking trusting some stranger's code on the internet?)
+minimal arch install.
+Check the install.sh script 
+(You should be doing that anyways, 
+what are you thinking trusting some stranger's code on the internet?)
 ```
 <br>
 
