@@ -32,4 +32,5 @@ if [ -n "$wallpaper" ]; then
     wal -n -i "$wallpaper" --backend colorz
     cp "$wallpaper" "$HOME/.current_wallpaper"
     swaync-client --reload-css
+    ./"$HOME/.config/scripts/update-bash-prompt.sh"
 fi
