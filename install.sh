@@ -16,7 +16,15 @@ NC=$(tput sgr0) #'\033[0m'
 # Basic dependencies
 printf "\n\n###############################################\n#${GREEN}Installing Hyprland and essential packages...${NC}#\n###############################################\n\n"
 sleep 3
-sudo pacman -Sy --needed --noconfirm hyprland xdg-desktop-portal-hyprland qt5-wayland qt6-wayland polkit-kde-agent xdg-utils vim openssh git base-devel
+
+# python-gobject is a dependency of power-profiles-daemon that does not install automatically
+sudo pacman -Sy --needed --noconfirm hyprland xdg-desktop-portal xdg-desktop-portal-hyprland \
+    qt5-wayland qt6-wayland polkit-kde-agent xdg-utils neovim openssh git base-devel pipewire \
+    pipewire-pulse pipewire-alsa pipewire-jack pipewire-libcamera wireplumber networkmanager \
+    upower udisks2 usbutils pciutils util-linux inetutils iproute2 net-tools wireless_tools \
+    wpa_supplicant bluez bluez-utils alsa-utils polkit gvfs gvfs-mtp gvfs-gphoto2 xdg-user-dirs \
+    xdg-utils power-profiles-daemon bash-completion man-db man-pages which htop \
+    power-profiles-daemon python-gobject
 
 # Install yay (if not already present)
 if ! command -v yay &>/dev/null; then
@@ -40,22 +48,26 @@ if lspci | grep -qi nvidia; then
 elif lspci | grep -Ei 'intel'; then
     printf "\n\nIntel Graphics Card detected!!!\nAttempting to install drivers\n\n"
     sleep 3
-    yay -Sy --needed --noconfirm intel-media-driver libva-intel-driver mesa vulkan-intel xorg-server xorg-xinit
+    yay -Sy --needed --noconfirm intel-media-driver libva-intel-driver mesa vulkan-intel \
+	xorg-server xorg-xinit
 elif lspci | grep -E 'AMD|ATI'; then
     printf "\n\nAMD Graphics Card detected!!!\nAttempting to install drivers\n\n"
     sleep 3
-    yay -Sy --needed --noconfirm libva-mesa-driver mesa vulkan-radeon xf86-video-amdgpu xf86-video-ati xorg-server xorg-xinit
+    yay -Sy --needed --noconfirm libva-mesa-driver mesa vulkan-radeon xf86-video-amdgpu \
+	xf86-video-ati xorg-server xorg-xinit
 else
     printf "\n\nNo Graphics Card detected!!!\nAttempting to install all open source drivers\n\n"
     sleep 3
-    yay -Sy --needed --noconfirm intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan-nouveau vulkan-radeon \
-	xf86-video-amdgpu xf86-video-ati xf86-video-nouveau xorg-server xorg-xinit
+    yay -Sy --needed --noconfirm intel-media-driver libva-intel-driver libva-mesa-driver mesa \
+	vulkan-intel vulkan-nouveau vulkan-radeon xf86-video-amdgpu xf86-video-ati \
+	xf86-video-nouveau xorg-server xorg-xinit
 fi
 
 printf "\n\n################################################\n#${GREEN}Installing and enabling ly as login manager...${NC}#\n################################################\n\n"
 sleep 3
 yay -Sy --noconfirm ly
 sudo systemctl enable ly.service
+sudo systemctl disable getty@tty2.service
 
 # Clone dotfiles repo (or update if exists)
 DOTFILES=~/dotfiles
@@ -76,8 +88,8 @@ sleep 2
 yay -Sy --needed --noconfirm swww neovim playerctl waybar hypridle \
     rofi-wayland kitty qt6ct kvantum swaync python-pywal16 \
   python-pywalfox-librewolf hyprlock librewolf-bin ttf-jetbrains-mono-nerd \
-  git pavucontrol-qt colorz stow pcmanfm-qt zscroll-git npm \
-  keepassxc bluez bluetui discord
+  pavucontrol-qt colorz stow pcmanfm-qt zscroll-git npm noto-fonts noto-fonts-cjk \
+  noto-fonts-emoji noto-fonts-extra keepassxc bluez bluetui discord papirus-icon-theme qt5ct qt6ct 
 
 printf "\n\nInstalling and setting up Vencord...\n\n"
 sleep 1
@@ -110,10 +122,12 @@ stow .
 
 cd "$HOME"
 
+# Enable services
+systemctl --user enable --now xdg-desktop-portal-hyprland pipewire pipewire-pulse wireplumber
 
 printf "\n\n###################################################\n#${GREEN}Disabling iwd and enabling NetworkManager service${NC}#\n###################################################\n\n"
 sleep 3
-sudo systemctl enable --now NetworkManager
+sudo systemctl enable --now NetworkManager power-profiles-daemon upower
 sudo systemctl disable iwd
 
 while true; do

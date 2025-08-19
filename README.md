@@ -19,37 +19,11 @@ Some are needed for the dots, others are preference (librewolf to hide from the 
 
 They're what **_I_** want on **_my_** system.
 
-Install with `yay` or `paru`:
-```bash
-yay -S \
-  swww \
-  neovim \
-  hypridle \
-  playerctl \
-  waybar \
-  rofi-wayland \
-  kitty \
-  qt6ct \
-  kvantum \
-  swaync \
-  python-pywal16 \
-  python-pywalfox-librewolf \
-  hyprlock \
-  librewolf-bin \
-  ttf-jetbrains-mono-nerd \
-  git \
-  pavucontrol-qt \
-  colorz \
-  stow \
-  pcmanfm-qt \
-  zscroll-git \
-  keepassxc \
-  bluez \
-  bluetui \
-  npm \
-  discord
 ```
-
+This list has gotten too big to maintain here since install.sh has been changed to work from a
+minimal arch install. Check the install.sh script 
+(You should be doing that anyways, what are you thinking trusting some stranger's code on the internet?)
+```
 <br>
 
 ### Keybinds
@@ -68,21 +42,21 @@ Vim motions can replace arrow keys for window movements (H, J, K, L)
 | `Super + V`                  | Toggle floating layout               |
 | `Super + Space`              | Open launcher/menu (rofi)            |
 | `Super + P`                  | Open keepassxc                       |
-| `Super + S`                  | Toggle split direction (dwindle)     |
+| `Super + S`                  | Toggle split direction               |
 | `Super + R`                  | Hyrpctl reload                       |
-| `Super + F`                  | Activate fullscreen for current window|
-| `Super + D`                  | Launch Discord                       |
+| `Super + F`                  | Fullscreen current window            |
+| `Super + D`                  | Launch/kill Discord                  |
 | `Super + W`                  | Toggle waybar                        |
 | `Super + Shift + T`          | Open wallpaper/theme selector        |
-| `Super + Arrow Keys`         | Move focus between windows           |
-| `Super + Shift + Arrow Keys` | Swap windows in given direction      |
+| `Super + Arrow/Vim Keys`     | Move focus between windows           |
+| `Super + Shift + Arrow/Vim Keys` | Swap windows in given direction  |
 | `Super + [0–9/0]`            | Switch to workspace 1–10             |
 | `Super + Shift + [0–9/0]`    | Move active window to workspace 1–10 |
 
 <br>
 
 ## To-Do
-- [x] Write an install script to automate package installation via `yay` and symlinking dotfiles with `stow`
+- [x] Write an install script to automate package installation via `yay` and symlinking dotfiles with `stow` (I ended uup doing much more than just that)
  
 - [x] Set up sway-nc properly
     
@@ -94,18 +68,18 @@ Vim motions can replace arrow keys for window movements (H, J, K, L)
 
 - [ ] Break hyprland config into modular files
 
-- [ ] Switch to USWM for hyprland and subsequent app launching
+- [ ] Switch to USWM for hyprland and subsequent app launching? Maybe???
 
 - [ ] Touch grass
 
 <br>
 
 #### For my own future reference:
-- Use ly as the display/login manager
 - librewolf extensions
     - Pywalfox
     - Firefox Multi-Account Containers
     - Canvas Blocker
+    - Dark Reader
 
 <br>
 
