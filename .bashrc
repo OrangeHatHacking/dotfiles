@@ -15,6 +15,7 @@ alias yrf="yay -Rns --noconfirm"
 alias yu="yay -Syu --noconfirm"
 alias ys="yay -Ss"
 alias yq="yay -Q"
+alias yqg="yay -Q | grep"
 
 alias i="sudo pacman -S --noconfirm"
 alias r="sudo pacman -Rns"
@@ -22,10 +23,11 @@ alias rf="sudo pacman -Rns --noconfirm"
 alias u="sudo pacman -Syu --noconfirm"
 alias s="sudo pacman -Ss"
 alias q="sudo pacman -Q"
+alias qg="sudo pacman -Q | grep"
 
 alias ff="clear && fastfetch"
 alias {n,nv}="nvim"
-alias h="history | grep "
+alias h="history | grep"
 
 set_pywal_prompt() {
 
