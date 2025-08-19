@@ -1,7 +1,6 @@
 #! /usr/bin/env bash
 . ~/.cache/wal/colors.sh
 
-
 hex_to_ansi() {
     local hex=${1#\#}
     local r=$((16#${hex:0:2}))

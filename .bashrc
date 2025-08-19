@@ -23,7 +23,7 @@ alias u="sudo pacman -Syu --noconfirm"
 alias s="sudo pacman -Ss"
 alias q="sudo pacman -Q"
 
-alias ff="fastfetch"
+alias ff="clear && fastfetch"
 alias {n,nv}="nvim"
 alias h="history | grep "
 
