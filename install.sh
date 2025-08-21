@@ -85,7 +85,7 @@ cd "$DOTFILES"
 # Install packages via yay
 printf "\n\nInstalling packages...\n\n"
 sleep 2
-yay -Sy --needed --noconfirm swww neovim playerctl waybar hypridle \
+yay -Sy --needed --noconfirm swww neovim playerctl waybar hypridle ripgrep \
     rofi-wayland kitty qt6ct kvantum swaync python-pywal16 \
   python-pywalfox-librewolf hyprlock librewolf-bin ttf-jetbrains-mono-nerd \
   pavucontrol-qt colorz stow pcmanfm-qt zscroll-git npm noto-fonts noto-fonts-cjk \
