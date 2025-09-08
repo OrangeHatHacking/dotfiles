@@ -69,3 +69,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # git lazy commit and push
 gl() { git commit -am "$1" && git push; }
+. "$HOME/.cargo/env"
