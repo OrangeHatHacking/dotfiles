@@ -89,7 +89,8 @@ yay -Sy --needed --noconfirm swww neovim playerctl waybar hypridle ripgrep \
     rofi-wayland kitty qt6ct kvantum swaync python-pywal16 \
   python-pywalfox-librewolf hyprlock librewolf-bin ttf-jetbrains-mono-nerd \
   pavucontrol-qt colorz stow pcmanfm-qt zscroll-git npm noto-fonts noto-fonts-cjk \
-  noto-fonts-emoji noto-fonts-extra keepassxc bluez bluetui discord papirus-icon-theme qt5ct qt6ct 
+  noto-fonts-emoji noto-fonts-extra keepassxc bluez bluetui discord papirus-icon-theme \
+  qt5ct qt6ct hyprshot
 
 printf "\n\nInstalling and setting up Vencord...\n\n"
 sleep 1
