@@ -19,9 +19,10 @@ window {
     fullscreen:                  false;
     transparency:                "real";
     cursor:                      "default";
-    background-color:            black / 12%;
+    background-color:            @background;
+	padding:					 10px;
+	border-radius:				 10px;
     border:                      0px;
-    border-color:                @selected;
 }
 
 /* Elements ----------------------------------------------------- */
@@ -56,8 +57,8 @@ listview {
 /* Scrollbar ---------------------------------------------------- */
 scrollbar {
     margin:                      0px 4px;
-    handle-width:                8px;
-    handle-color:                white;
+    handle-width:                4px;
+    handle-color:                @foreground;
     background-color:            @shade-shadow;
     border-radius:               4px;
 }
