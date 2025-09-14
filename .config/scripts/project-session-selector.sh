@@ -33,7 +33,7 @@ case "$MODE" in
 		# logic for creating new project in $HOME/repos
 		if [ "$SELECTED_ENTRY" = "===Create New Project===" ]; then
 			killall -9 rofi
-			NEW_PROJECT_NAME=$(echo | rofi -dmenu -theme "$HOME/.config/rofi/themes/project_sessions.rasi" \
+			NEW_PROJECT_NAME=$( rofi -dmenu -theme "$HOME/.config/rofi/themes/project_sessions.rasi" \
 						-p 'New Project Name'\
 						-theme-str 'window { location: north; y-offset: 300;} listview { enabled: false; } mode-switcher {enabled: false; }')
 			mkdir -p "$HOME/repos/$NEW_PROJECT_NAME"
@@ -50,9 +50,10 @@ case "$MODE" in
 			KITTY_CMD="$HOME/.config/scripts/devmode.sh $SELECTED_ENTRY $HOME/repos/$SELECTED_ENTRY"
 		fi
 
-		killall -9 kitty
-		sleep 0.1
+		pidof kitty && killall -9 kitty
+		killall -9 rofi
 		hyprctl dispatch exec "kitty -e $KITTY_CMD"
+		exit 0
     fi
     ;;
   sessions)
@@ -61,8 +62,10 @@ case "$MODE" in
     else
 		KITTY_CMD="tmux attach-session -t $SELECTED_ENTRY"
 
-		killall -9 kitty
+		pidof kitty && killall -9 kitty
+		killall -9 rofi
 		hyprctl dispatch exec "kitty -e $KITTY_CMD"
+		exit 0
     fi
     ;;
 esac
