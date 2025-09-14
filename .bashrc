@@ -21,7 +21,7 @@ alias pi="sudo pacman -S --noconfirm"
 alias pr="sudo pacman -Rns"
 alias prf="sudo pacman -Rns --noconfirm"
 alias pu="sudo pacman -Syu --noconfirm"
-alias ps="sudo pacman -Ss"
+alias pacs="sudo pacman -Ss"
 alias pq="sudo pacman -Q"
 alias pqg="sudo pacman -Q | grep"
 

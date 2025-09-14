@@ -1,0 +1,50 @@
+// -*- mode: jsonc -*-
+{
+    "reload_style_on_change":true, 
+    "layer": "top",
+    "position": "bottom",
+    "height": 32,
+
+    "modules-left": [
+        "hyprland/workspaces",
+    ],
+    "modules-center": [
+    ],
+    "modules-right": [
+		"network",
+		"pulseaudio",
+		"battery",
+		"clock"
+    ],
+    "clock": {
+		"format": "{:%H:%M}",
+        "tooltip-format": "{:%d/%m/%Y}",
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format-warning": "{capacity}% {icon}",
+        "format-critical": "{capacity}% {icon}",
+        "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "⚠",
+		"tooltip-format": "",
+		"on-click": "hyprctl dispatch exec '[float]' 'kitty -e nmtui'"
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "tooltip-format": "{volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol-qt"
+    },
+}

@@ -1,0 +1,126 @@
+@import "../../.cache/wal/colors-waybar.css";
+
+@define-color bg @background;
+@define-color fg @foreground;
+@define-color accent @color4;
+@define-color alt-accent @color6;
+@define-color highlight @color2;
+@define-color dimtext @color8;
+
+* {
+    font-family: 'JetBrainsMono Nerd Font Propo','SF Pro Text', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background-color: @bg;
+    color: #ffffff;
+}
+
+window#waybar.hidden {
+    opacity: 0;
+}
+
+button {
+    border: none;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background-color: @alt-accent;
+}
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover, #network:hover {
+    background-color: @alt-accent;
+} 
+
+#workspaces button {
+    background-color: @bg;
+    color: @fg;
+    min-width: 18px;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background-color:@accent;
+    color: @fg;
+}
+
+#workspaces button.focused {
+    background-color: @bg;
+}
+
+#workspaces button.urgent {
+    background-color: @alt-accent;
+}
+
+#workspaces button.active {
+    background-color: @highlight;
+    color: @fg;
+}
+
+#mode {
+    background-color: @bg;
+    box-shadow: @accent;
+}
+
+#clock,
+#battery,
+#network,
+#pulseaudio {
+    padding: 0 10px;
+    color: @fg;
+    margin: 0 3px;
+    background-color: @bg;
+}
+
+#window,
+#workspaces {
+    margin: 0 0px;
+}
+
+#clock {
+    background-color: @bg;
+}
+
+#battery {
+    background-color: @bg;
+    color: @fg;
+}
+
+#battery.charging, #battery.plugged {
+    color: @fg;
+    background-color: @bg;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c15;
+    color: @fg;
+}
+
+label:focus {
+    background-color: @accent;
+}
+
+#network {
+    background-color: @bg;
+    color: @fg;
+}
+
+#network.disconnected {
+    background-color: #f53c3c;
+}
+
+#pulseaudio {
+    background-color: @bg;
+    color: @fg;
+}
+
+#pulseaudio.muted {
+    background-color: @bg;
+    color: @dimtext;
+}
+

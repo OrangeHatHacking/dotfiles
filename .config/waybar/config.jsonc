@@ -1,27 +1,24 @@
 // -*- mode: jsonc -*-
 {
-    // reload when CSS is updated
     "reload_style_on_change":true, 
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30,
+    "position": "top",
+    "height": 32,
     "margin-top": 5,
-    // "width": 1280, // Waybar width
-    // Choose the order of the modules
+
     "modules-left": [
         "hyprland/workspaces",
         "group/media"
     ],
     "modules-center": [
-	"clock"
+		"clock"
     ],
     "modules-right": [
-	"cpu",
-	"memory",
-	"network",
+		"cpu",
+		"memory",
+		"network",
         "pulseaudio",
-	"custom/powerprofile",
-	"battery"
+		"custom/powerprofile",
+		"battery"
     ],
     "hyprland/workspaces": {
       "format": "{name}"
@@ -32,16 +29,15 @@
     },
     "memory": {
         "format": "{}% ",
-	"tooltip-format": "{used:0.1f}/{total:0.1f} GiB used"
+		"tooltip-format": "{used:0.1f}/{total:0.1f} GiB used"
     },
     "clock": {
-	"format": "{:%H:%M}",
+		"format": "{:%H:%M}",
         "tooltip-format": "{:%d/%m/%Y %H:%M}",
         "format-alt": "{:%A, %B %d | %H:%M}"
     },
     "battery": {
         "states": {
-            // "good": 95,
             "warning": 30,
             "critical": 15
         },
