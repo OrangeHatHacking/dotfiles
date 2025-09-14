@@ -11,6 +11,7 @@
     font-family: 'JetBrainsMono Nerd Font Propo','SF Pro Text', sans-serif;
     font-size: 14px;
     font-weight: bold;
+	border-radius: 0px;
 }
 
 window#waybar {
