@@ -42,13 +42,15 @@ Vim motions can replace arrow keys for window movements (H, J, K, L)
 | `Super + M`                  | Lock screen                          |
 | `Super + E`                  | Open file manager                    |
 | `Super + V`                  | Toggle floating layout               |
-| `Super + Space`              | Open launcher/menu (rofi)            |
-| `Super + P`                  | Open keepassxc                       |
+| `Super + Space`              | Open app launcher (rofi)             |
+| `Super + P`                  | Open project/tmux session launcher   |
 | `Super + S`                  | Toggle split direction               |
 | `Super + R`                  | Hyrpctl reload                       |
 | `Super + F`                  | Fullscreen current window            |
 | `Super + D`                  | Launch/kill Discord                  |
 | `Super + W`                  | Toggle waybar                        |
+| `Super + Shift + F`          | Toggle floating mode (current window)|
+| `Super + Shift + Return`     | Toggle focus mode                    |
 | `Super + Shift + T`          | Open wallpaper/theme selector        |
 | `Super + Arrow/Vim Keys`     | Move focus between windows           |
 | `Super + Shift + Arrow/Vim Keys` | Swap windows in given direction  |

@@ -24,7 +24,7 @@ sudo pacman -Sy --needed --noconfirm hyprland xdg-desktop-portal xdg-desktop-por
     upower udisks2 usbutils pciutils util-linux inetutils iproute2 net-tools wireless_tools \
     wpa_supplicant bluez bluez-utils alsa-utils polkit gvfs gvfs-mtp gvfs-gphoto2 xdg-user-dirs \
     xdg-utils power-profiles-daemon bash-completion man-db man-pages which htop \
-    power-profiles-daemon python-gobject
+    power-profiles-daemon python-gobject tmux
 
 # Install yay (if not already present)
 if ! command -v yay &>/dev/null; then
