@@ -1,0 +1,75 @@
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+/* main window */
+window {
+    fullscreen:                  false;
+    transparency:                "real";
+    cursor:                      "default";
+    background-color:            @background;
+	padding:					 10px;
+	border-radius:				 10px;
+    border:                      0px;
+    text-color: @foreground;
+}
+
+mainbox {
+    children: [ mode-switcher, inputbar, listview];
+}
+
+/* input field */
+inputbar {
+    padding: 6px;
+    margin: 4px;
+    border: 1px;
+    border-radius: 6px;
+    background-color: @background;
+}
+
+/* mode switcher = tab bar */
+mode-switcher {
+    spacing: 8;
+    padding: 6px;
+    background-color: @background;
+}
+
+button {
+    padding: 6px 14px;
+    border-radius: 6px;
+    background-color: @background;
+    text-color: @foreground;
+}
+
+button hover {
+    background-color: @active-background;
+    text-color: @foreground;
+}
+
+button selected {
+    background-color: @selected-normal-background;
+    text-color: @foreground;
+    font: "JetBrainsMono Nerd Font Bold 12";
+}
+
+/* entries */
+listview {
+    lines: 12;
+    spacing: 4;
+    padding: 8px;
+    margin: 6px 8px 8px 8px;
+}
+
+element {
+    padding: 6px 8px;
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element selected {
+    background-color: @selected-normal-background;
+    text-color: @background;
+}
+

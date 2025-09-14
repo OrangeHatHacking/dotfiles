@@ -26,4 +26,5 @@ else
     cmd="$HOME/.config/scripts/devmode.sh $project"
 fi
 
+pidof kitty && killall -9 kitty
 hyprctl dispatch exec "kitty -e $cmd"
