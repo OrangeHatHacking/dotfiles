@@ -19,8 +19,8 @@ list_sessions() {
 # no mode passed 
 if [ -z "$MODE" ]; then
   rofi \
-    -modi "Projects:$SCRIPT projects,Sessions:$SCRIPT sessions" \
-    -show Projects \
+    -modi " Projects:$SCRIPT projects, Sessions:$SCRIPT sessions" \
+    -show " Projects" \
     -p "Select" \
     -theme "$HOME/.config/rofi/themes/project_sessions.rasi"
 fi

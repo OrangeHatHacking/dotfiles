@@ -21,8 +21,15 @@ return {
 			virtual_text = { spacing = 2, prefix = "●" },
 			severity_sort = true,
 			float = { border = "rounded", source = "if_many" },
-			signs = true,
 			underline = true,
+			signs = {
+				text = {
+					[vim.diagnostic.severity.ERROR] = '✘',
+					[vim.diagnostic.severity.WARN]  = '▲',
+					[vim.diagnostic.severity.HINT]  = '⚑',
+					[vim.diagnostic.severity.INFO]  = '»',
+				},
+			},
 		})
 
 		-- Borders for hover/signature
@@ -101,14 +108,12 @@ return {
 							Lua = {
 								runtime = {
 									version = "LuaJIT",
-									path = vim.split(package.path, ";"),
 								},
 								diagnostics = {
 									globals = { "vim" },
 								},
 								workspace = {
-									library = vim.api.nvim_get_runtime_file("", true),
-									checkThirdParty = false,
+									library = { vim.env.VIMRUNTIME },
 								},
 								telemetry = { enable = false },
 							},
