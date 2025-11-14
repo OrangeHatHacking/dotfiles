@@ -21,7 +21,7 @@
             "enabled": true
         },
         "DynamicImageModalAPI": {
-            "enabled": false
+            "enabled": true
         },
         "MemberListDecoratorsAPI": {
             "enabled": false
@@ -102,7 +102,7 @@
             "enabled": false
         },
         "ClearURLs": {
-            "enabled": false
+            "enabled": true
         },
         "ClientTheme": {
             "enabled": false
@@ -138,7 +138,10 @@
             "enabled": false
         },
         "Dearrow": {
-            "enabled": false
+            "enabled": false,
+            "hideButton": false,
+            "replaceElements": 0,
+            "dearrowByDefault": true
         },
         "Decor": {
             "enabled": false
@@ -165,13 +168,19 @@
             "enableEmojiBypass": true,
             "transformEmojis": true,
             "transformStickers": true,
-            "transformCompoundSentence": false
+            "transformCompoundSentence": true,
+            "emojiSize": 48,
+            "stickerSize": 160,
+            "useHyperLinks": true,
+            "hyperLinkText": "{{NAME}}",
+            "disableEmbedPermissionCheck": false
         },
         "FakeProfileThemes": {
-            "enabled": false
+            "enabled": true,
+            "nitroFirst": true
         },
         "FavoriteEmojiFirst": {
-            "enabled": false
+            "enabled": true
         },
         "FavoriteGifSearch": {
             "enabled": false
@@ -186,7 +195,7 @@
             "enabled": false
         },
         "FixYoutubeEmbeds": {
-            "enabled": false
+            "enabled": true
         },
         "ForceOwnerCrown": {
             "enabled": false
@@ -210,7 +219,8 @@
             "enabled": false
         },
         "GreetStickerPicker": {
-            "enabled": false
+            "enabled": false,
+            "greetMode": "Greet"
         },
         "HideMedia": {
             "enabled": false
@@ -225,13 +235,21 @@
             "enabled": false
         },
         "ImageZoom": {
-            "enabled": true
+            "enabled": true,
+            "size": 100,
+            "zoom": 2,
+            "nearestNeighbour": false,
+            "square": false,
+            "saveZoomValues": true,
+            "invertScroll": true,
+            "zoomSpeed": 0.5
         },
         "ImplicitRelationships": {
             "enabled": false
         },
         "InvisibleChat": {
-            "enabled": false
+            "enabled": false,
+            "savedPasswords": "password, Password"
         },
         "IrcColors": {
             "enabled": false
@@ -248,7 +266,8 @@
         "MemberCount": {
             "enabled": true,
             "memberList": true,
-            "toolTip": true
+            "toolTip": true,
+            "voiceActivity": true
         },
         "MentionAvatars": {
             "enabled": false
@@ -315,7 +334,7 @@
             "enabled": false
         },
         "NoTypingAnimation": {
-            "enabled": false
+            "enabled": true
         },
         "NoUnblockToJump": {
             "enabled": false
@@ -348,7 +367,7 @@
             "enabled": false
         },
         "petpet": {
-            "enabled": false
+            "enabled": true
         },
         "PictureInPicture": {
             "enabled": false
@@ -417,7 +436,7 @@
             "enabled": false
         },
         "ServerInfo": {
-            "enabled": false
+            "enabled": true
         },
         "ServerListIndicators": {
             "enabled": false
@@ -435,13 +454,17 @@
             "enabled": false
         },
         "ShowHiddenThings": {
-            "enabled": true
+            "enabled": true,
+            "showTimeouts": true,
+            "showInvitesPaused": true,
+            "showModView": true
         },
         "ShowMeYourName": {
             "enabled": true,
             "displayNames": false,
             "mode": "user-nick",
-            "inReplies": false
+            "inReplies": false,
+            "friendNicknames": "dms"
         },
         "ShowTimeoutDuration": {
             "enabled": false
@@ -450,7 +473,9 @@
             "enabled": true
         },
         "SilentTyping": {
-            "enabled": true
+            "enabled": true,
+            "isEnabled": true,
+            "showIcon": false
         },
         "SortFriendRequests": {
             "enabled": false
@@ -476,7 +501,10 @@
             "enabled": false
         },
         "SuperReactionTweaks": {
-            "enabled": false
+            "enabled": false,
+            "superReactByDefault": true,
+            "unlimitedSuperReactionPlaying": false,
+            "superReactionPlayingLimit": 20
         },
         "TextReplace": {
             "enabled": false
@@ -485,7 +513,9 @@
             "enabled": false
         },
         "Translate": {
-            "enabled": true
+            "enabled": true,
+            "autoTranslate": false,
+            "showChatBarButton": true
         },
         "TypingIndicator": {
             "enabled": false
@@ -566,6 +596,12 @@
         },
         "CopyStickerLinks": {
             "enabled": false
+        },
+        "AutoDNDWhilePlaying": {
+            "enabled": false
+        },
+        "ImageFilename": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -578,6 +614,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1755378579379
+        "settingsSyncVersion": 1762980041639
     }
 }
