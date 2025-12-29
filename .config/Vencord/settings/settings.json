@@ -60,7 +60,10 @@
             "enabled": false
         },
         "AnonymiseFileNames": {
-            "enabled": true
+            "enabled": true,
+            "anonymiseByDefault": true,
+            "method": 0,
+            "randomisedLength": 7
         },
         "AppleMusicRichPresence": {
             "enabled": false
@@ -236,8 +239,8 @@
         },
         "ImageZoom": {
             "enabled": true,
-            "size": 100,
-            "zoom": 2,
+            "size": 530,
+            "zoom": 1.6,
             "nearestNeighbour": false,
             "square": false,
             "saveZoomValues": true,
@@ -377,7 +380,8 @@
             "userBasedCategoryList": {
                 "401767095190159362": []
             },
-            "canCollapseDmSection": false
+            "canCollapseDmSection": false,
+            "pinOrder": 0
         },
         "PlainFolderIcon": {
             "enabled": false
@@ -475,7 +479,8 @@
         "SilentTyping": {
             "enabled": true,
             "isEnabled": true,
-            "showIcon": false
+            "showIcon": false,
+            "contextMenu": true
         },
         "SortFriendRequests": {
             "enabled": false
@@ -515,7 +520,12 @@
         "Translate": {
             "enabled": true,
             "autoTranslate": false,
-            "showChatBarButton": true
+            "showChatBarButton": true,
+            "receivedInput": "auto",
+            "service": "google",
+            "receivedOutput": "en",
+            "sentInput": "auto",
+            "sentOutput": "en"
         },
         "TypingIndicator": {
             "enabled": false
@@ -614,6 +624,10 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1762980041639
+        "settingsSyncVersion": 1766668368553
+    },
+    "uiElements": {
+        "chatBarButtons": {},
+        "messagePopoverButtons": {}
     }
 }
