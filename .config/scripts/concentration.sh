@@ -6,10 +6,10 @@ if [ "$concentration_mode" = 1 ] ; then
         keyword animation borderangle,0;\
         keyword decoration:shadow:enabled 0;\
 	    keyword decoration:fullscreen_opacity 1;\
-        keyword general:gaps_in 0;\
         keyword decoration:blur:size 9;\
         keyword decoration:blur:passes 9;\
         keyword general:gaps_out 0;\
+        keyword general:gaps_in 0;\
         keyword general:border_size 1;\
         keyword decoration:rounding 0;\
 		keyword decoration:active_opacity 1.0;\
