@@ -27,6 +27,7 @@ alias pqg="sudo pacman -Q | grep"
 
 alias ff="clear && fastfetch"
 alias {n,nv}="nvim"
+alias snv="sudo -E -s nvim"
 alias h="history | grep"
 
 set_pywal_prompt() {

@@ -240,7 +240,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 530,
-            "zoom": 3.4000000000000004,
+            "zoom": 2.2,
             "nearestNeighbour": false,
             "square": false,
             "saveZoomValues": true,
@@ -627,7 +627,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1767869952565
+        "settingsSyncVersion": 1769117062376
     },
     "uiElements": {
         "chatBarButtons": {},
