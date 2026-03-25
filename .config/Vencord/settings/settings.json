@@ -240,7 +240,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 530,
-            "zoom": 2.2,
+            "zoom": 3.4,
             "nearestNeighbour": false,
             "square": false,
             "saveZoomValues": true,
@@ -285,9 +285,6 @@
             "enabled": false
         },
         "MessageLogger": {
-            "enabled": false
-        },
-        "MessageTags": {
             "enabled": false
         },
         "MutualGroupDMs": {
@@ -615,6 +612,12 @@
         },
         "MoreQuickReactions": {
             "enabled": false
+        },
+        "CustomCommands": {
+            "enabled": false
+        },
+        "NoDefaultHangStatus": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -627,7 +630,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1769117062376
+        "settingsSyncVersion": 1774346104088
     },
     "uiElements": {
         "chatBarButtons": {},

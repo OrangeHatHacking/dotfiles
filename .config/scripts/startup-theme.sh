@@ -2,14 +2,14 @@
 
 shopt -s nullglob
 
-previous_wallpaper=$(swww query | awk -F'image: ' '{print$2}')
+previous_wallpaper=$(awww query | awk -F'image: ' '{print$2}')
 
 if [[ ! -e $previous_wallpaper ]]; then
     wallpapers=("$HOME/.config/wallpapers/"*.{jpg,jpeg,png,gif})
     previous_wallpaper=${wallpapers[RANDOM % ${#wallpapers[@]}]}
 fi
 
-swww img "$previous_wallpaper" --transition-duration 0
+awww img "$previous_wallpaper" --transition-duration 0
 wal -n -i "$previous_wallpaper" --backend colorz
 cp "$previous_wallpaper" "$HOME/.current_wallpaper"
 
