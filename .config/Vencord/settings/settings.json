@@ -240,7 +240,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 530,
-            "zoom": 3.4,
+            "zoom": 3.3999999999999995,
             "nearestNeighbour": false,
             "square": false,
             "saveZoomValues": true,
@@ -618,6 +618,12 @@
         },
         "NoDefaultHangStatus": {
             "enabled": false
+        },
+        "CharacterCounter": {
+            "enabled": false
+        },
+        "NoMiddleClickPaste": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -630,10 +636,11 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1774346104088
+        "settingsSyncVersion": 1780343971465
     },
     "uiElements": {
         "chatBarButtons": {},
         "messagePopoverButtons": {}
-    }
+    },
+    "windowsMaterial": "none"
 }
