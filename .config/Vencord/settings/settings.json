@@ -239,8 +239,8 @@
         },
         "ImageZoom": {
             "enabled": true,
-            "size": 530,
-            "zoom": 3.3999999999999995,
+            "size": 771.7532467532467,
+            "zoom": 2.5272727272727287,
             "nearestNeighbour": false,
             "square": false,
             "saveZoomValues": true,
@@ -258,9 +258,6 @@
             "enabled": false
         },
         "KeepCurrentChannel": {
-            "enabled": false
-        },
-        "LastFMRichPresence": {
             "enabled": false
         },
         "LoadingQuotes": {
@@ -624,6 +621,9 @@
         },
         "NoMiddleClickPaste": {
             "enabled": false
+        },
+        "MusicRichPresence": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -636,7 +636,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1780343971465
+        "settingsSyncVersion": 1784153567566
     },
     "uiElements": {
         "chatBarButtons": {},

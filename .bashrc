@@ -63,6 +63,8 @@ export EDITOR=nvim
 export VISUAL=nvim
 export PROMPT_DIRTRIM=3
 
+# Load local secrets (not tracked in dotfiles)
+[[ -f "$HOME/.env.secrets" ]] && source "$HOME/.env.secrets"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
