@@ -52,7 +52,7 @@ case "$MODE" in
 
 		pidof kitty && killall -9 kitty
 		killall -9 rofi
-		hyprctl dispatch exec "kitty -e $KITTY_CMD"
+		kitty -e $KITTY_CMD &
 		exit 0
     fi
     ;;
@@ -64,7 +64,7 @@ case "$MODE" in
 
 		pidof kitty && killall -9 kitty
 		killall -9 rofi
-		hyprctl dispatch exec "kitty -e $KITTY_CMD"
+		kitty -e $KITTY_CMD &
 		exit 0
     fi
     ;;
