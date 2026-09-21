@@ -314,7 +314,7 @@ hl.window_rule({
 
 hl.window_rule({
     name  = "float-nmtui",
-    match = { class = "^(nmtui)" },
+    match = { title = "^(nmtui)" },
     float = true,
 })
 

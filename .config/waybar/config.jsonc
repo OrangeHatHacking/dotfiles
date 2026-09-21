@@ -62,7 +62,7 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
 	"tooltip-format": "{essid}\n{ifname} {ipaddr}",
-	"on-click": "hyprctl dispatch exec '[float]' 'kitty -e nmtui'"
+	"on-click": "kitty -T nmtui -e nmtui"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
