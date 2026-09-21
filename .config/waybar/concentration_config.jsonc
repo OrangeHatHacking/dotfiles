@@ -16,6 +16,8 @@
 		"battery",
 		"clock"
     ],
+    "hyprland/workspaces": {
+    },
     "clock": {
 		"format": "{:%H:%M}",
         "tooltip-format": "{:%d/%m/%Y}",

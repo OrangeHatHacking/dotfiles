@@ -94,12 +94,16 @@ hl.env("HYPRCURSOR_SIZE", "24")
 ---- LOOK AND FEEL ----
 -----------------------
 
+local concentration = io.open("/tmp/hypr-concentration", "r") ~= nil
+
 hl.config({
     general = {
-        gaps_in  = 3,
-        gaps_out = { top = 5, right = 10, bottom = 10, left = 10 },
+        gaps_in  = concentration and 0 or 3,
+        gaps_out = concentration
+            and { top = 0, right = 0, bottom = 0, left = 0 }
+            or  { top = 5, right = 10, bottom = 10, left = 10 },
 
-        border_size = 2,
+        border_size = concentration and 1 or 2,
 
         col = {
             active_border   = { colors = { color2, color4 }, angle = 45 },
@@ -112,14 +116,14 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 10,
+        rounding       = concentration and 0 or 10,
         rounding_power = 2,
 
-        active_opacity   = 0.9,
-        inactive_opacity = 0.7,
+        active_opacity   = concentration and 1.0 or 0.9,
+        inactive_opacity = concentration and 1.0 or 0.7,
 
         shadow = {
-            enabled      = true,
+            enabled      = not concentration,
             range        = 4,
             render_power = 3,
             color        = background,
@@ -127,14 +131,14 @@ hl.config({
 
         blur = {
             enabled   = true,
-            size      = 2,
-            passes    = 3,
+            size      = concentration and 9 or 2,
+            passes    = concentration and 9 or 3,
             vibrancy  = 0.1696,
         },
     },
 
     animations = {
-        enabled = true,
+        enabled = not concentration,
     },
 })
 
