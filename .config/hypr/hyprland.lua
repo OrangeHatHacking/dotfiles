@@ -6,8 +6,8 @@
 ---- LOAD COLORS ---
 --------------------
 
--- Parse the pywal colors-hyprland.conf (HyprLang $var = rgba(...) format)
--- into a Lua table so we can use them throughout the config.
+-- Parse the pywal colors-hyprland.conf (HyprLang $var = rgba(R,G,B,A) format)
+-- and convert decimal rgba to hex rgba(RRGGBBAA) for the Lua API.
 local colors = {}
 local colors_file = os.getenv("HOME") .. "/.cache/wal/colors-hyprland.conf"
 local f = io.open(colors_file, "r")
@@ -15,17 +15,23 @@ if f then
     for line in f:lines() do
         local name, value = line:match("^%$(%S+)%s*=%s*(.+)$")
         if name and value then
-            colors[name] = value
+            local r, g, b, a = value:match("^rgba%((%d+),(%d+),(%d+),([%d%.]+)%)$")
+            if r then
+                local alpha = math.floor(tonumber(a) * 255 + 0.5)
+                colors[name] = string.format("rgba(%02x%02x%02x%02x)", r, g, b, alpha)
+            else
+                colors[name] = value
+            end
         end
     end
     f:close()
 end
 
 -- Fallback colors in case pywal hasn't run yet
-local color2      = colors["color2"]      or "rgba(172,79,35,1.0)"
-local color4      = colors["color4"]      or "rgba(197,154,45,1.0)"
-local color8      = colors["color8"]      or "rgba(112,95,92,1.0)"
-local background  = colors["background"]  or "rgba(30,16,12,1.0)"
+local color2      = colors["color2"]      or "rgba(ac4f23ff)"
+local color4      = colors["color4"]      or "rgba(c59a2dff)"
+local color8      = colors["color8"]      or "rgba(705f5cff)"
+local background  = colors["background"]  or "rgba(1e100cff)"
 
 
 ------------------
