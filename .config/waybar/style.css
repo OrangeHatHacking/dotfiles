@@ -79,6 +79,7 @@ button:hover {
 #temperature,
 #backlight,
 #custom-powerprofile,
+#custom-bluetooth,
 #network,
 #pulseaudio,
 #wireplumber,
@@ -177,6 +178,10 @@ label:focus {
 
 #pulseaudio.muted {
     background-color: @bg;
+    color: @dimtext;
+}
+
+#custom-bluetooth.disabled {
     color: @dimtext;
 }
 

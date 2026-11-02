@@ -11,3 +11,15 @@ vim.opt.splitbelow = true
 vim.opt.scrolloff = 10
 vim.opt.showmode = false
 vim.opt.winborder = "rounded"
+
+vim.opt.autoread = true
+vim.opt.updatetime = 250
+
+vim.api.nvim_create_autocmd({
+  "FocusGained",
+  "BufEnter",
+  "CursorHold",
+  "CursorHoldI",
+}, {
+  command = "checktime",
+})

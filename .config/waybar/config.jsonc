@@ -16,6 +16,7 @@
 		"cpu",
 		"memory",
 		"network",
+		"custom/bluetooth",
         "pulseaudio",
 		"custom/powerprofile",
 		"battery"
@@ -63,6 +64,12 @@
         "format-disconnected": "Disconnected ⚠",
 	"tooltip-format": "{essid}\n{ifname} {ipaddr}",
 	"on-click": "kitty -T nmtui -e nmtui"
+    },
+    "custom/bluetooth": {
+	"exec": "$HOME/.config/scripts/bt-toggle.sh",
+	"on-click": "$HOME/.config/scripts/bt-toggle.sh toggle",
+	"interval": 2,
+	"return-type": "json"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
